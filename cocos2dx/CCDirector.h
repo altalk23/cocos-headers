@@ -459,11 +459,6 @@ protected:
     /* The CCEGLView, where everything is rendered */
     CCEGLView    *m_pobOpenGLView;
 
-    RT_ADD(
-        // this is never referenced; probably optimized out
-        PAD(0x4);
-    )
-
     double m_dAnimationInterval;
     double m_dOldAnimationInterval;
 

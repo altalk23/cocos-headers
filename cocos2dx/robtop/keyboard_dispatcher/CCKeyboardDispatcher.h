@@ -44,7 +44,6 @@ RT_ADD(
 		CCArray* m_pDelegates;		// 0x20
 		bool m_bUnknown24;			// 0x24
 		bool m_bUnknown25;			// 0x25
-		PAD(2)
 		ccCArray* m_pUnknown28;		// 0x28
 		ccCArray* m_pUnknown2c;		// 0x2c
 		bool m_bShiftPressed;		// 0x30

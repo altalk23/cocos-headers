@@ -431,6 +431,13 @@ public:
 
 protected:
     virtual void updateBlendFunc();
+public:
+    RT_ADD(
+        void loadDefaults(void);
+        void loadScaledDefaults(float);
+        void resumeSystem(void);
+        void saveDefaults(void);
+    );
 };
 
 // end of particle_nodes group

@@ -117,8 +117,6 @@ public:
     bool initWithFile(const char* fileImage, unsigned int capacity);
     bool init();
 
-    void increaseAtlasCapacity();
-
     /** removes a child given a certain index. It will also cleanup the running actions depending on the cleanup parameter.
     @warning Removing a child from a CCSpriteBatchNode is very slow
     */
@@ -169,6 +167,15 @@ protected:
     It add the sprite to the children and descendants array, but it doesn't update add it to the texture atlas
     */
     CCSpriteBatchNode * addSpriteWithoutQuad(CCSprite*child, unsigned int z, int aTag);
+
+    RT_ADD(
+        bool getManualSortChildren(void)const;
+        int getAtlasCapacity(void);
+        int getUsedAtlasCapacity(void);
+        void increaseAtlasCapacity(unsigned int);
+        void manualSortAllChildren(void);
+        void setManualSortChildren(bool);
+    );
 
 private:
     void updateAtlasIndex(CCSprite* sprite, int* curIndex);
