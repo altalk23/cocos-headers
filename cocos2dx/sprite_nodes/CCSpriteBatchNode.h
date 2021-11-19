@@ -171,8 +171,10 @@ protected:
     RT_ADD(
         bool getManualSortChildren(void)const;
         int getAtlasCapacity(void);
+    public:
         int getUsedAtlasCapacity(void);
         void increaseAtlasCapacity(unsigned int);
+    protected:
         void manualSortAllChildren(void);
         void setManualSortChildren(bool);
     );
