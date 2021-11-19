@@ -195,8 +195,6 @@ RT_ADD(
 	class CC_DLL CCKeyboardHandler : public CCObject
 	{
 	public:
-		CCKeyboardHandler(const CCKeyboardHandler&);
-		CCKeyboardHandler();
 		virtual ~CCKeyboardHandler();
 
 		CCKeyboardHandler& operator=(const CCKeyboardHandler&);

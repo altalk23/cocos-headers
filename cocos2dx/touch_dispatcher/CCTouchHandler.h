@@ -82,6 +82,8 @@ protected:
 class CC_DLL  CCStandardTouchHandler : public CCTouchHandler
 {
 public:
+    ~CCStandardTouchHandler(void);
+    
     /** initializes a TouchHandler with a delegate and a priority */
     virtual bool initWithDelegate(CCTouchDelegate *pDelegate, int nPriority);
 

@@ -27,8 +27,6 @@ RT_ADD(
 	class CC_DLL CCMouseHandler : public CCObject
 	{
 	public:
-		CCMouseHandler(const CCMouseHandler&);
-		CCMouseHandler();
 		virtual ~CCMouseHandler();
 
 		CCMouseHandler& operator=(const CCMouseHandler&);
