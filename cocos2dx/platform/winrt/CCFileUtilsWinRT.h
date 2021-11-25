@@ -47,11 +47,11 @@ class CC_DLL CCFileUtilsWinRT : public CCFileUtils
 public:
     /* override funtions */
     bool init();
-    virtual std::string getWritablePath();
-    virtual bool isFileExist(const std::string& strFilePath);
-    virtual bool isAbsolutePath(const std::string& strPath);
+    virtual gd::string getWritablePath();
+    virtual bool isFileExist(const gd::string& strFilePath);
+    virtual bool isAbsolutePath(const gd::string& strPath);
 	
-	static std::string getAppPath();
+	static gd::string getAppPath();
 
 };
 

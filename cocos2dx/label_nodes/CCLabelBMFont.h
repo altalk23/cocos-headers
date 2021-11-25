@@ -119,7 +119,7 @@ public://@public
     //! Padding
     ccBMFontPadding    m_tPadding;
     //! atlas name
-    std::string m_sAtlasName;
+    gd::string m_sAtlasName;
     //! values for kerning
     tCCKerningHashElement *m_pKerningDictionary;
     
@@ -150,11 +150,11 @@ public:
     std::set<unsigned int>* getCharacterSet() const;
 private:
     std::set<unsigned int>* parseConfigFile(const char *controlFile);
-    void parseCharacterDefinition(std::string line, ccBMFontDef *characterDefinition);
-    void parseInfoArguments(std::string line);
-    void parseCommonArguments(std::string line);
-    void parseImageFileName(std::string line, const char *fntFile);
-    void parseKerningEntry(std::string line);
+    void parseCharacterDefinition(gd::string line, ccBMFontDef *characterDefinition);
+    void parseInfoArguments(gd::string line);
+    void parseCommonArguments(gd::string line);
+    void parseImageFileName(gd::string line, const char *fntFile);
+    void parseKerningEntry(gd::string line);
     void purgeKerningDictionary();
     void purgeFontDefDictionary();
 };
@@ -280,11 +280,11 @@ protected:
     unsigned short* m_sString;
     
     // name of fntFile
-    std::string m_sFntFile;
+    gd::string m_sFntFile;
     
     // initial string without line breaks
     unsigned short* m_sInitialString;
-    std::string m_sInitialStringUTF8;
+    gd::string m_sInitialStringUTF8;
     
     // alignment of all lines
     CCTextAlignment m_pAlignment;

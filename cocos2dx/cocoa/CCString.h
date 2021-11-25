@@ -55,7 +55,7 @@ public:
     /**
      * @lua NA
      */
-    CCString(const std::string& str);
+    CCString(const gd::string& str);
     /**
      * @lua NA
      */
@@ -106,11 +106,11 @@ public:
     virtual CCObject* copyWithZone(CCZone* pZone);
     virtual bool isEqual(const CCObject* pObject);
 
-    /** create a string with std string, you can also pass a c string pointer because the default constructor of std::string can access a c string pointer. 
+    /** create a string with std string, you can also pass a c string pointer because the default constructor of gd::string can access a c string pointer. 
      *  @return A CCString pointer which is an autorelease object pointer,
      *          it means that you needn't do a release operation unless you retain it.
      */
-    static CCString* create(const std::string& str);
+    static CCString* create(const gd::string& str);
 
     /** create a string with format, it's similar with the c function 'sprintf', the default buffer size is (1024*100) bytes,
      *  if you want to change it, you should modify the kMaxStringLen macro in CCString.cpp file.
@@ -142,7 +142,7 @@ private:
     bool initWithFormatAndValist(const char* format, va_list ap);
 
 public:
-    std::string m_sString;
+    gd::string m_sString;
 };
 
 /*

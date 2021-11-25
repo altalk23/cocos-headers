@@ -78,8 +78,8 @@ private:
     EditBoxInputFlag    m_eEditBoxInputFlag;
     KeyboardReturnType  m_eKeyboardReturnType;
     
-    std::string m_strText;
-    std::string m_strPlaceHolder;
+    gd::string m_strText;
+    gd::string m_strPlaceHolder;
     
     ccColor3B m_colText;
     ccColor3B m_colPlaceHolder;

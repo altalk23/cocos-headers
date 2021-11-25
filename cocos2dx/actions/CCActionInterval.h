@@ -911,7 +911,7 @@ public:
     static CCAnimate* create(CCAnimation *pAnimation);
     CC_SYNTHESIZE_RETAIN(CCAnimation*, m_pAnimation, Animation)
 protected:
-    std::vector<float>* m_pSplitTimes;
+    gd::vector<float>* m_pSplitTimes;
     int                m_nNextFrame;
     CCSpriteFrame*  m_pOrigFrame;
        unsigned int    m_uExecutedLoops;

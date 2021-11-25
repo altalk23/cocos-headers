@@ -49,17 +49,17 @@ public:
      *  Sets the Resource root path.
      *  @deprecated Please use CCFileUtils::sharedFileUtils()->setSearchPaths() instead.
      */
-    CC_DEPRECATED_ATTRIBUTE void setResourceRootPath(const std::string& rootResDir);
+    CC_DEPRECATED_ATTRIBUTE void setResourceRootPath(const gd::string& rootResDir);
 
     /** 
      *  Gets the Resource root path.
      *  @deprecated Please use CCFileUtils::sharedFileUtils()->getSearchPaths() instead. 
      */
-    CC_DEPRECATED_ATTRIBUTE const std::string& getResourceRootPath(void);
+    CC_DEPRECATED_ATTRIBUTE const gd::string& getResourceRootPath(void);
 
-    void setStartupScriptFilename(const std::string& startupScriptFile);
+    void setStartupScriptFilename(const gd::string& startupScriptFile);
 
-    const std::string& getStartupScriptFilename(void)
+    const gd::string& getStartupScriptFilename(void)
     {
         return m_startupScriptFilename;
     }
@@ -68,8 +68,8 @@ protected:
     HINSTANCE           m_hInstance;
     HACCEL              m_hAccelTable;
     LARGE_INTEGER       m_nAnimationInterval;
-    std::string         m_resourceRootPath;
-    std::string         m_startupScriptFilename;
+    gd::string         m_resourceRootPath;
+    gd::string         m_startupScriptFilename;
 
     static CCApplication * sm_pSharedApplication;
 };

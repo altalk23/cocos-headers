@@ -256,7 +256,7 @@ protected:
     void recreateLabel();
     
     unsigned int m_uFontSize;
-    std::string m_strFontName;
+    gd::string m_strFontName;
 };
 
 

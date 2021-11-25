@@ -105,7 +105,7 @@ public:
 	bool supportsShareableVAO(void) const;
 
     /** returns whether or not an OpenGL is supported */
-    bool checkForGLExtension(const std::string &searchName) const;
+    bool checkForGLExtension(const gd::string &searchName) const;
 
     bool init(void);
 
@@ -139,7 +139,7 @@ public:
 private:
     CCConfiguration(void);
     static CCConfiguration *s_gSharedConfiguration;
-	static std::string		s_sConfigfile;
+	static gd::string		s_sConfigfile;
     
 protected:
     GLint           m_nMaxTextureSize;

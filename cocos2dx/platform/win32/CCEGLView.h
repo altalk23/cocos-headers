@@ -90,7 +90,7 @@ public:
     @brief    get the shared main open gl window
     */
     static CCEGLView* sharedOpenGLView();
-    RT_ADD( static CCEGLView* create(const std::string&);   )
+    RT_ADD( static CCEGLView* create(const gd::string&);   )
 
     RT_ADD(
         //actually this is my function but i dont wanna make a new macro for it

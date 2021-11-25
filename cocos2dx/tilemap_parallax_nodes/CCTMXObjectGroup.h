@@ -73,7 +73,7 @@ public:
     CCDictionary* objectNamed(const char *objectName);
 protected:    
     /** name of the group */
-    std::string m_sGroupName;
+    gd::string m_sGroupName;
 };
 
 // end of tilemap_parallax_nodes group

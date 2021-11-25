@@ -44,7 +44,7 @@ public:
     /** Constructor, it's used by CCHttpClient internal, users don't need to create HttpResponse manually
      @param request the corresponding HttpRequest which leads to this response 
      */
-    CCHttpResponse(CCHttpRequest* request)
+    CCHttpResponse(CCHttpRequest* request) : _responseData(), _errorBuffer()
     {
         _pHttpRequest = request;
         if (_pHttpRequest)
@@ -53,8 +53,6 @@ public:
         }
         
         _succeed = false;
-        _responseData.clear();
-        _errorBuffer.clear();
     }
     
     /** Destructor, it will be called in CCHttpClient internal,
@@ -96,13 +94,13 @@ public:
     };
     
     /** Get the http response raw data */
-    inline std::vector<char>* getResponseData()
+    inline gd::vector<char>* getResponseData()
     {
         return &_responseData;
     }
     
     /** get the Rawheader **/
-    inline std::vector<char>* getResponseHeader()
+    inline gd::vector<char>* getResponseHeader()
     {
         return &_responseHeader;
     }
@@ -138,14 +136,14 @@ public:
     
     /** Set the http response raw buffer, is used by CCHttpClient
      */
-    inline void setResponseData(std::vector<char>* data)
+    inline void setResponseData(gd::vector<char>* data)
     {
         _responseData = *data;
     }
     
     /** Set the http response Header raw buffer, is used by CCHttpClient
      */
-    inline void setResponseHeader(std::vector<char>* data)
+    inline void setResponseHeader(gd::vector<char>* data)
     {
         _responseHeader = *data;
     }
@@ -163,8 +161,7 @@ public:
      */
     inline void setErrorBuffer(const char* value)
     {
-        _errorBuffer.clear();
-        _errorBuffer.assign(value);
+        _errorBuffer = gd::string(value);
     };
     
 protected:
@@ -173,10 +170,10 @@ protected:
     // properties
     CCHttpRequest*        _pHttpRequest;  /// the corresponding HttpRequest pointer who leads to this response 
     bool                _succeed;       /// to indecate if the http reqeust is successful simply
-    std::vector<char>   _responseData;  /// the returned raw data. You can also dump it as a string
-    std::vector<char>   _responseHeader;  /// the returned raw header data. You can also dump it as a string
+    gd::vector<char>   _responseData;  /// the returned raw data. You can also dump it as a string
+    gd::vector<char>   _responseHeader;  /// the returned raw header data. You can also dump it as a string
     int                 _responseCode;    /// the status code returned from libcurl, e.g. 200, 404
-    std::string         _errorBuffer;   /// if _responseCode != 200, please read _errorBuffer to find the reason 
+    gd::string         _errorBuffer;   /// if _responseCode != 200, please read _errorBuffer to find the reason 
     
 };
 

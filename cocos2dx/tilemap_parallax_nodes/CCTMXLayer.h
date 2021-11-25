@@ -201,7 +201,7 @@ private:
     unsigned int atlasIndexForNewZ(int z);
 protected:
     //! name of the layer
-    std::string m_sLayerName;
+    gd::string m_sLayerName;
     //! TMX Layer supports opacity
     unsigned char        m_cOpacity;
 

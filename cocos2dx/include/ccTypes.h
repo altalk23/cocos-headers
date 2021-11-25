@@ -445,7 +445,7 @@ public:
     { m_dimensions = CCSizeMake(0,0); }
     
     // font name
-    std::string             m_fontName;
+    gd::string             m_fontName;
     // font size
     int                     m_fontSize;
     // horizontal alignment

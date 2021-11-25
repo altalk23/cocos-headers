@@ -43,8 +43,8 @@ typedef struct _PrecompiledProgram
 
 typedef struct _CompiledProgram
 {
-    std::string key;
-    std::vector<unsigned char> program;
+    gd::string key;
+    gd::vector<unsigned char> program;
     int    length;
 } CompiledProgram;
 
@@ -70,8 +70,8 @@ public:
     */
     static CCPrecompiledShaders* sharedPrecompiledShaders();
 
-    std::string addShaders(const GLchar* vShaderByteArray, const GLchar* fShaderByteArray);
-    bool addProgram(GLuint program, const std::string& id);
+    gd::string addShaders(const GLchar* vShaderByteArray, const GLchar* fShaderByteArray);
+    bool addProgram(GLuint program, const gd::string& id);
 
     bool loadProgram(GLuint program, const GLchar* vShaderByteArray, const GLchar* fShaderByteArray);
 
@@ -86,8 +86,8 @@ protected:
 
     void                Init();
 
-    std::map<std::string, CompiledProgram*> m_programs;
-    std::map<std::string, PrecompiledProgram*> m_precompiledPrograms;
+    gd::map<gd::string, CompiledProgram*> m_programs;
+    gd::map<gd::string, PrecompiledProgram*> m_precompiledPrograms;
     
     bool                m_isDirty;
 };

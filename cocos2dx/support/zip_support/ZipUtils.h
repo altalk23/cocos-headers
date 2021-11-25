@@ -151,25 +151,25 @@ namespace cocos2d
             * @param string the string to encode
             * @param key the xor key
             */
-            static std::string base64EncodeEnc(std::string string, std::string key);
+            static gd::string base64EncodeEnc(gd::string string, gd::string key);
             /** Decodes the XOR + Base64 encoding rob uses
             * @param string the string to decode
             * @param key the xor key
             */
-            static std::string base64DecodeEnc(std::string string, std::string key);
+            static gd::string base64DecodeEnc(gd::string string, gd::string key);
             
 
-            static std::string base64URLDecode(std::string string);
-            static std::string base64URLEncode(std::string string);
+            static gd::string base64URLDecode(gd::string string);
+            static gd::string base64URLEncode(gd::string string);
 
-            static std::string compressString(std::string, bool, int);
-            static std::string decompressString(std::string, bool, int);
+            static gd::string compressString(gd::string, bool, int);
+            static gd::string decompressString(gd::string, bool, int);
             static void decompressString2(unsigned char*, bool, int, int);
 
-            static void encryptDecrypt(std::string, int);
-            static void encryptDecryptWKey(std::string, std::string);
+            static void encryptDecrypt(gd::string, int);
+            static void encryptDecryptWKey(gd::string, gd::string);
 
-            static char hexToChar(std::string*);
+            static char hexToChar(gd::string*);
         )
 
     private:
@@ -210,7 +210,7 @@ namespace cocos2d
         *
         * @since v2.0.5
         */
-        ZipFile(const std::string &zipFile, const std::string &filter = std::string());
+        ZipFile(const gd::string &zipFile, const gd::string &filter = gd::string());
         virtual ~ZipFile();
 
         /**
@@ -222,7 +222,7 @@ namespace cocos2d
         *
         * @since v2.0.5
         */
-        bool setFilter(const std::string &filter);
+        bool setFilter(const gd::string &filter);
 
         /**
         * Check does a file exists or not in zip file
@@ -232,7 +232,7 @@ namespace cocos2d
         *
         * @since v2.0.5
         */
-        bool fileExists(const std::string &fileName) const;
+        bool fileExists(const gd::string &fileName) const;
 
         /**
         * Get resource file data from a zip file.
@@ -243,11 +243,11 @@ namespace cocos2d
         *
         * @since v2.0.5
         */
-        unsigned char *getFileData(const std::string &fileName, unsigned long *pSize);
+        unsigned char *getFileData(const gd::string &fileName, unsigned long *pSize);
 
     private:
-        bool setFilter(const std::string &filer, ZipFilePrivate *data);
-        unsigned char *getFileData(const std::string &fileName, unsigned long *pSize, ZipFilePrivate *data);
+        bool setFilter(const gd::string &filer, ZipFilePrivate *data);
+        unsigned char *getFileData(const gd::string &fileName, unsigned long *pSize, ZipFilePrivate *data);
         
         /** Internal data like zip file pointer / file list array and so on */
         ZipFilePrivate *_data;

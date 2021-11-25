@@ -99,13 +99,13 @@ public:
      *  @js NA
      */
     bool init(const Delegate& delegate,
-              const std::string& url,
-              const std::vector<std::string>* protocols = NULL);
+              const gd::string& url,
+              const gd::vector<gd::string>* protocols = NULL);
     
     /**
      *  @brief Sends string data to websocket server.
      */
-    void send(const std::string& message);
+    void send(const gd::string& message);
     
     /**
      *  @brief Sends binary data to websocket server.
@@ -147,9 +147,9 @@ private:
     
 private:
 	State        _readyState;
-    std::string  _host;
+    gd::string  _host;
     unsigned int _port;
-    std::string  _path;
+    gd::string  _path;
     
     friend class WsThreadHelper;
     WsThreadHelper* _wsHelper;

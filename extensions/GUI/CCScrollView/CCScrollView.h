@@ -345,7 +345,7 @@ public:
     void unregisterScriptHandler(int nScriptEventType);
     int  getScriptHandler(int nScriptEventType);
 private:
-    std::map<int,int> m_mapScriptHandler;
+    gd::map<int,int> m_mapScriptHandler;
 };
 
 // end of GUI group

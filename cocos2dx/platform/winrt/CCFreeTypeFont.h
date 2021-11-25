@@ -59,14 +59,14 @@ typedef struct FontBufferInfo
 
 typedef struct FTWordInfo
 {
-	std::vector<TGlyph> glyphs; // glyphs for the word
+	gd::vector<TGlyph> glyphs; // glyphs for the word
 	FT_BBox             bbox;   // bounding box containing all of the glyphs in the word
 } FTWordInfo;
 
 
 typedef struct FTLineInfo
 {
-	std::vector<TGlyph> glyphs;     // glyphs for the line text
+	gd::vector<TGlyph> glyphs;     // glyphs for the line text
 	FT_BBox             bbox;       // bounding box containing all of the glyphs in the line
     unsigned int        width;      // width of the line     
     FT_Vector           pen;        // current pen position
@@ -99,9 +99,9 @@ private:
     unsigned char* CCFreeTypeFont::loadSystemFont(const char *pFontName, unsigned long *size);
 
     FT_Error CCFreeTypeFont::initGlyphs(const char* text);
-    FT_Error CCFreeTypeFont::initWordGlyphs(std::vector<TGlyph>& glyphs, const std::string& text, FT_Vector& pen);
+    FT_Error CCFreeTypeFont::initWordGlyphs(gd::vector<TGlyph>& glyphs, const gd::string& text, FT_Vector& pen);
 
-	void compute_bbox(std::vector<TGlyph>& glyphs, FT_BBox  *abbox);
+	void compute_bbox(gd::vector<TGlyph>& glyphs, FT_BBox  *abbox);
 
     void drawText(FTLineInfo* pInfo, unsigned char* pBuffer, FT_Vector *pen);
 
@@ -111,16 +111,16 @@ private:
 
     FT_Vector getPenForAlignment(FTLineInfo* pInfo, CCImage::ETextAlign eAlignMask, int lineNumber, int totalLines);
 
-    FT_Error addWord(const std::string& word);
+    FT_Error addWord(const gd::string& word);
     void newLine();
     void endLine();
 
-    const std::string m_space;
+    const gd::string m_space;
 
-	std::string		m_text;
-	std::string		m_fontName;
+	gd::string		m_text;
+	gd::string		m_fontName;
 	FT_Face			m_face;
-	std::vector<FTLineInfo*> m_lines;
+	gd::vector<FTLineInfo*> m_lines;
 
     int             m_inWidth;      // requested width of text box
     int             m_inHeight;     // requested height of text box

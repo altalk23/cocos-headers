@@ -62,12 +62,9 @@ public:
         new/retain/release still works, which means you need to release it manually
         Please refer to HttpRequestTest.cpp to find its usage
      */
-    CCHttpRequest()
+    CCHttpRequest() : _url(), _requestData(), _tag()
     {
         _requestType = kHttpUnkown;
-        _url.clear();
-        _requestData.clear();
-        _tag.clear();
         _pTarget = NULL;
         _pSelector = NULL;
         _pUserData = NULL;
@@ -121,7 +118,9 @@ public:
      */
     inline void setRequestData(const char* buffer, unsigned int len)
     {
-        _requestData.assign(buffer, buffer + len);
+        auto vec = std::vector<char>(_requestData);
+        vec.assign(buffer, buffer + len);
+        _requestData = gd::vector<char>(vec);
     };
     /** Get the request data pointer back */
     inline char* getRequestData()
@@ -131,7 +130,7 @@ public:
     /** Get the size of request data back */
     inline int getRequestDataSize()
     {
-        return _requestData.size();
+        return std::vector<char>(_requestData).size();
     }
     
     /** Option field. You can set a string tag to identify your request, this tag can be found in HttpResponse->getHttpRequest->getTag()
@@ -206,13 +205,13 @@ public:
     }
     
     /** Set any custom headers **/
-    inline void setHeaders(std::vector<std::string> pHeaders)
+    inline void setHeaders(gd::vector<gd::string> pHeaders)
    	{
    		_headers=pHeaders;
    	}
    
     /** Get custom headers **/
-   	inline std::vector<std::string> getHeaders()
+   	inline gd::vector<gd::string> getHeaders()
    	{
    		return _headers;
    	}
@@ -221,13 +220,13 @@ public:
 protected:
     // properties
     HttpRequestType             _requestType;    /// kHttpRequestGet, kHttpRequestPost or other enums
-    std::string                 _url;            /// target url that this request is sent to
-    std::vector<char>           _requestData;    /// used for POST
-    std::string                 _tag;            /// user defined tag, to identify different requests in response callback
+    gd::string                 _url;            /// target url that this request is sent to
+    gd::vector<char>           _requestData;    /// used for POST
+    gd::string                 _tag;            /// user defined tag, to identify different requests in response callback
     CCObject*          _pTarget;        /// callback target of pSelector function
     SEL_HttpResponse            _pSelector;      /// callback function, e.g. MyLayer::onHttpResponse(CCHttpClient *sender, CCHttpResponse * response)
     void*                       _pUserData;      /// You can add your customed data here 
-    std::vector<std::string>    _headers;		      /// custom http headers
+    gd::vector<gd::string>    _headers;		      /// custom http headers
 
     RT_ADD(
         int _requestTypeGJ;

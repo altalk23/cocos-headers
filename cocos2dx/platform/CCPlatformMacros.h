@@ -108,6 +108,17 @@ It's new in cocos2d-x since v0.99.5
     #define USING_NS_CC 
 #endif 
 
+/**
+ * Cacao specific:
+ * Since Cacao uses gd namespace for stl support, this needs to be reflected for
+ * classes using stl containers. Easiest way to hijack this is redefining the NS_CC_BEGIN
+ * macro.
+ */
+#if !defined(CACAO_VERSION)
+    #undef NS_CC_BEGIN 
+    #define NS_CC_BEGIN namespace gd = std; namespace cocos2d {
+#endif
+
 /** CC_PROPERTY_READONLY is used to declare a protected variable.
  We can use getter to read the variable.
  @param varType : the type of variable.

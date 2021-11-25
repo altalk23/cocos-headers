@@ -37,7 +37,7 @@ Draws an animated skeleton, providing a simple API for applying one or more anim
 */
 class CCSkeletonAnimation: public CCSkeleton {
 public:
-	std::vector<AnimationState*> states;
+	gd::vector<AnimationState*> states;
 
 	static CCSkeletonAnimation* createWithData (SkeletonData* skeletonData);
 	static CCSkeletonAnimation* createWithFile (const char* skeletonDataFile, Atlas* atlas, float scale = 1);
@@ -63,7 +63,7 @@ protected:
 
 private:
 	typedef CCSkeleton super;
-	std::vector<AnimationStateData*> stateDatas;
+	gd::vector<AnimationStateData*> stateDatas;
 
 	void initialize ();
 };

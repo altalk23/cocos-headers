@@ -135,7 +135,7 @@ bool CCImage::initWithImageFile(const char * strPath, EImageFormat eImgFmt/* = e
     SDL_FreeSurface(iSurf);
 #else
     unsigned long nSize = 0;
-    std::string fullPath = CCFileUtils::sharedFileUtils()->fullPathForFilename(strPath);
+    gd::string fullPath = CCFileUtils::sharedFileUtils()->fullPathForFilename(strPath);
     unsigned char* pBuffer = CCFileUtils::sharedFileUtils()->getFileData(fullPath.c_str(), "rb", &nSize);
     if (pBuffer != NULL && nSize > 0)
     {
@@ -736,20 +736,20 @@ bool CCImage::saveToFile(const char *pszFilePath, bool bIsToRGB)
     {
         CC_BREAK_IF(NULL == pszFilePath);
 
-        std::string strFilePath(pszFilePath);
+        gd::string strFilePath(pszFilePath);
         CC_BREAK_IF(strFilePath.size() <= 4);
 
-        std::string strLowerCasePath(strFilePath);
+        gd::string strLowerCasePath(strFilePath);
         for (unsigned int i = 0; i < strLowerCasePath.length(); ++i)
         {
             strLowerCasePath[i] = tolower(strFilePath[i]);
         }
 
-        if (std::string::npos != strLowerCasePath.find(".png"))
+        if (gd::string::npos != strLowerCasePath.find(".png"))
         {
             CC_BREAK_IF(!_saveImageToPNG(pszFilePath, bIsToRGB));
         }
-        else if (std::string::npos != strLowerCasePath.find(".jpg"))
+        else if (gd::string::npos != strLowerCasePath.find(".jpg"))
         {
             CC_BREAK_IF(!_saveImageToJPG(pszFilePath));
         }

@@ -240,15 +240,15 @@ protected:
     CCSize m_TextureSize;
     CCTexture2DPixelFormat m_PixelFormat;
 
-    std::string m_strFileName;
+    gd::string m_strFileName;
     CCImage::EImageFormat m_FmtImage;
 
     ccTexParams     m_texParams;
     CCSize          m_size;
     CCTextAlignment m_alignment;
     CCVerticalTextAlignment m_vAlignment;
-    std::string     m_strFontName;
-    std::string     m_strText;
+    gd::string     m_strFontName;
+    gd::string     m_strText;
     float           m_fFontSize;
 };
 

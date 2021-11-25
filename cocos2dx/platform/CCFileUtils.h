@@ -154,8 +154,8 @@ public:
 
      @since v2.1
      */
-    RT_REMOVE(  virtual std::string fullPathForFilename(const char* pszFileName);       )
-    RT_ADD(     virtual std::string fullPathForFilename(const char* pszFileName, bool); )
+    RT_REMOVE(  virtual gd::string fullPathForFilename(const char* pszFileName);       )
+    RT_ADD(     virtual gd::string fullPathForFilename(const char* pszFileName, bool); )
     
     RT_ADD(virtual void removeFullPath(const char* path));
 
@@ -222,7 +222,7 @@ public:
      *  @js NA
      *  @lua NA
      */
-    virtual void setSearchResolutionsOrder(const std::vector<std::string>& searchResolutionsOrder);
+    virtual void setSearchResolutionsOrder(const gd::vector<gd::string>& searchResolutionsOrder);
 
     /**
       * Append search order of the resources.
@@ -235,12 +235,12 @@ public:
     /**
      *  Gets the array that contains the search order of the resources.
      *
-     *  @see setSearchResolutionsOrder(const std::vector<std::string>&), fullPathForFilename(const char*).
+     *  @see setSearchResolutionsOrder(const gd::vector<gd::string>&), fullPathForFilename(const char*).
      *  @since v2.1
      *  @js NA
      *  @lua NA
      */
-    virtual const std::vector<std::string>& getSearchResolutionsOrder();
+    virtual const gd::vector<gd::string>& getSearchResolutionsOrder();
     
     /** 
      *  Sets the array of search paths.
@@ -261,7 +261,7 @@ public:
      *  @js NA
      *  @lua NA
      */
-    virtual void setSearchPaths(const std::vector<std::string>& searchPaths);
+    virtual void setSearchPaths(const gd::vector<gd::string>& searchPaths);
     
     /**
       * Adds a path to search paths.
@@ -294,16 +294,16 @@ public:
      *  @js NA
      *  @lua NA
      */
-    virtual const std::vector<std::string>& getSearchPaths();
+    virtual const gd::vector<gd::string>& getSearchPaths();
 
     /**
      *  Gets the writable path.
      *  @return  The path that can be write/read a file in
      *  @lua NA
      */
-    virtual std::string getWritablePath() = 0;
+    virtual gd::string getWritablePath() = 0;
 
-    RT_ADD(virtual std::string getWritablePath2();)
+    RT_ADD(virtual gd::string getWritablePath2();)
     
     /**
      *  Checks whether a file exists.
@@ -313,7 +313,7 @@ public:
      *  @return true if the file exists, otherwise it will return false.
      *  @lua NA
      */
-    virtual bool isFileExist(const std::string& strFilePath) = 0;
+    virtual bool isFileExist(const gd::string& strFilePath) = 0;
     
     /**
      *  Checks whether the path is an absolute path.
@@ -325,7 +325,7 @@ public:
      *  @return true if it's an absolute path, otherwise it will return false.
      *  @lua NA
      */
-    virtual bool isAbsolutePath(const std::string& strPath);
+    virtual bool isAbsolutePath(const gd::string& strPath);
     
     
     /**
@@ -356,10 +356,10 @@ protected:
      *  @return The new filename after searching in the filename lookup dictionary.
      *          If the original filename wasn't in the dictionary, it will return the original filename.
      */
-    virtual std::string getNewFilename(const char* pszFileName);
+    virtual gd::string getNewFilename(const char* pszFileName);
 
     RT_ADD(virtual bool shouldUseHD();)
-    RT_ADD(virtual bool addSufix(std::string, std::string);)
+    RT_ADD(virtual bool addSufix(gd::string, gd::string);)
     
     /**
      *  Gets full path for filename, resolution directory and search path.
@@ -369,7 +369,7 @@ protected:
      *  @param searchPath The search path.
      *  @return The full path of the file. It will return an empty string if the full path of the file doesn't exist.
      */
-    virtual std::string getPathForFilename(const std::string& filename, const std::string& resolutionDirectory, const std::string& searchPath);
+    virtual gd::string getPathForFilename(const gd::string& filename, const gd::string& resolutionDirectory, const gd::string& searchPath);
     
     /**
      *  Gets full path for the directory and the filename.
@@ -381,30 +381,30 @@ protected:
      *  @param strFilename  The name of the file.
      *  @return The full path of the file, if the file can't be found, it will return an empty string.
      */
-    virtual std::string getFullPathForDirectoryAndFilename(const std::string& strDirectory, const std::string& strFilename);
+    virtual gd::string getFullPathForDirectoryAndFilename(const gd::string& strDirectory, const gd::string& strFilename);
     
     /**
      *  Creates a dictionary by the contents of a file.
      *  @note This method is used internally.
      */
-    virtual CCDictionary* createCCDictionaryWithContentsOfFile(const std::string& filename);
+    virtual CCDictionary* createCCDictionaryWithContentsOfFile(const gd::string& filename);
     
     /**
      *  Write a dictionary to a plist file.
      *  @note This method is used internally.
      */
-    virtual bool writeToFile(CCDictionary *dict, const std::string& fullPath);
+    virtual bool writeToFile(CCDictionary *dict, const gd::string& fullPath);
     
     /**
      *  Creates an array by the contents of a file.
      *  @note This method is used internally.
      */
-    virtual CCArray* createCCArrayWithContentsOfFile(const std::string& filename);
+    virtual CCArray* createCCArrayWithContentsOfFile(const gd::string& filename);
     
     /** Dictionary used to lookup filenames based on a key.
      *  It is used internally by the following methods:
      *
-     *  std::string fullPathForFilename(const char*);
+     *  gd::string fullPathForFilename(const char*);
      *
      *  @since v2.1
      */
@@ -414,13 +414,13 @@ protected:
      *  The vector contains resolution folders.
      *  The lower index of the element in this vector, the higher priority for this resolution directory.
      */
-    std::vector<std::string> m_searchResolutionsOrderArray;
+    gd::vector<gd::string> m_searchResolutionsOrderArray;
     
     /**
      * The vector contains search paths.
      * The lower index of the element in this vector, the higher priority for this search path.
      */
-    std::vector<std::string> m_searchPathArray;
+    gd::vector<gd::string> m_searchPathArray;
     
     /**
      *  The default root path of resources.
@@ -429,13 +429,13 @@ protected:
      *  On Android, the default root path of resources will be assigned with "assets/" in CCFileUtilsAndroid::init().
      *  Similarly on Blackberry, we assign "app/native/Resources/" to this variable in CCFileUtilsBlackberry::init().
      */
-    std::string m_strDefaultResRootPath;
+    gd::string m_strDefaultResRootPath;
     
     /**
      *  The full path cache. When a file is found, it will be added into this cache. 
      *  This variable is used for improving the performance of file search.
      */
-    std::map<std::string, std::string> m_fullPathCache;
+    gd::map<gd::string, gd::string> m_fullPathCache;
     
     /**
      *  The singleton pointer of CCFileUtils.

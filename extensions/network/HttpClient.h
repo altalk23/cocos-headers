@@ -109,7 +109,7 @@ private:
     int _timeoutForConnect;
     int _timeoutForRead;
     
-    // std::string reqId;
+    // gd::string reqId;
 };
 
 // end of Network group

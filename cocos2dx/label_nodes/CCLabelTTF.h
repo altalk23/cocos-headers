@@ -177,11 +177,11 @@ protected:
     /** The vertical alignment of the label */
     CCVerticalTextAlignment m_vAlignment;
     /** Font name used in the label */
-    std::string * m_pFontName;
+    gd::string * m_pFontName;
     /** Font size of the label */
     float m_fFontSize;
     /** label's string */
-    std::string m_string;
+    gd::string m_string;
     
     /** font shadow */
     bool    m_shadowEnabled;

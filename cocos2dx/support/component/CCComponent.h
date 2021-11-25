@@ -65,7 +65,7 @@ public:
     
 protected:
     CCNode *m_pOwner;
-    std::string m_strName;
+    gd::string m_strName;
     bool m_bEnabled;
 };
 

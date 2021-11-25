@@ -110,7 +110,7 @@ public:
     
     /* @brief Gets current version code.
      */
-    std::string getVersion();
+    gd::string getVersion();
     
     /* @brief Deletes recorded version code.
      */
@@ -179,15 +179,15 @@ private:
     
 private:
     //! The path to store downloaded resources.
-    std::string _storagePath;
+    gd::string _storagePath;
     
     //! The version of downloaded resources.
-    std::string _version;
+    gd::string _version;
     
-    std::string _packageUrl;
-    std::string _versionFileUrl;
+    gd::string _packageUrl;
+    gd::string _versionFileUrl;
     
-    std::string _downloadedVersion;
+    gd::string _downloadedVersion;
     
     CURL *_curl;
     Helper *_schedule;

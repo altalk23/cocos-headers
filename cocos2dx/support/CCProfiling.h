@@ -82,7 +82,7 @@ public:
     /** resets the timer properties */
     void reset();
 
-    std::string m_NameStr;
+    gd::string m_NameStr;
     int               numberOfCalls;
     int               m_dAverageTime1;
     int               m_dAverageTime2;

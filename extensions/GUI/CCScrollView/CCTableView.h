@@ -250,7 +250,7 @@ protected:
     /**
      * vector with all cell positions
      */
-    std::vector<float> m_vCellsPositions;
+    gd::vector<float> m_vCellsPositions;
     //NSMutableIndexSet *indices_;
     /**
      * cells that are currently in the table
