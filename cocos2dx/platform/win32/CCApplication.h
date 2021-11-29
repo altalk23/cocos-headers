@@ -21,7 +21,7 @@ public:
     @brief    Run the message loop.
     */
     RT_REMOVE(  virtual int run();  )
-    RT_ADD(     virtual void gameDidSave(); )
+    RT_ADD(     virtual bool gameDidSave(); )
 
     /**
     @brief    Get current applicaiton instance.
