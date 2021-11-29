@@ -143,8 +143,12 @@ extern "C" {
   #if defined(GLFW_INCLUDE_GLCOREARB)
     #include <OpenGL/gl3.h>
   #elif !defined(GLFW_INCLUDE_NONE)
-    #define GL_GLEXT_LEGACY
-    #include <OpenGL/gl.h>
+    #if defined(__arm64__)
+      #include <OpenGLES/ES1/gl.h> // idk
+    #else
+      #define GL_GLEXT_LEGACY
+      #include <OpenGL/gl.h>
+    #endif
   #endif
   #if defined(GLFW_INCLUDE_GLU)
     #include <OpenGL/glu.h>

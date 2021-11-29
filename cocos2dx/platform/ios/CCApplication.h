@@ -74,6 +74,9 @@ public:
      */
     virtual TargetPlatform getTargetPlatform();
 
+    //Robtop modification
+    virtual void openURL(char const* link);
+
 protected:
     static CCApplication * sm_pSharedApplication;
 };

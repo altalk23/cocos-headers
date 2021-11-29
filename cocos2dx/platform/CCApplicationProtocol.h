@@ -79,7 +79,7 @@ public:
         virtual void applicationWillBecomeActive();
         virtual void applicationWillResignActive();
         virtual void trySaveGame();
-        virtual void gameDidSave();
+        virtual bool gameDidSave();
     )
 
     /**
