@@ -180,10 +180,7 @@ RT_ADD(
 	class CC_DLL CCKeyboardDelegate
 	{
 	public:
-		CCKeyboardDelegate(const CCKeyboardDelegate&);
 		CCKeyboardDelegate();
-
-		CCKeyboardDelegate& operator=(const CCKeyboardDelegate&);
 
 		virtual void keyDown(enumKeyCodes key);
 

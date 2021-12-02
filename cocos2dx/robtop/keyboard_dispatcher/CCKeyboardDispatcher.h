@@ -11,10 +11,7 @@ RT_ADD(
 	{
 	public:
 		CCKeyboardDispatcher();
-		CCKeyboardDispatcher(const CCKeyboardDispatcher&);
 		virtual ~CCKeyboardDispatcher();
-
-		CCKeyboardDispatcher& operator=(const CCKeyboardDispatcher&);
 
 		void addDelegate(CCKeyboardDelegate* pDelegate);
 

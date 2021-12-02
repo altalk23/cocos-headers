@@ -10,10 +10,7 @@ RT_ADD(
 	class CC_DLL CCMouseDelegate 
 	{
 	public:
-		CCMouseDelegate(const CCMouseDelegate&);
 		CCMouseDelegate();
-
-		CCMouseDelegate& operator=(const CCMouseDelegate&);
 
 		virtual void rightKeyDown();
 

@@ -90,13 +90,10 @@ protected:
     )
 public:
     CCObject(void);
-    RT_ADD( CCObject(const CCObject&);  )
     /**
      *  @lua NA
      */
     virtual ~CCObject(void);
-
-    RT_ADD( CCObject& operator=(const CCObject&);   )
     
     void release(void);
     void retain(void);

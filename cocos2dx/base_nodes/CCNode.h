@@ -136,10 +136,6 @@ public:
      * @js ctor
      */
     CCNode(void);
-
-    RT_ADD(
-        CCNode(const CCNode&);
-    )
     
     /**
      * Default destructor

@@ -11,10 +11,7 @@ RT_ADD(
 	{
 	public:
 		CCMouseDispatcher();
-		CCMouseDispatcher(const CCMouseDispatcher&);
 		virtual ~CCMouseDispatcher();
-
-		CCMouseDispatcher& operator=(const CCMouseDispatcher&);
 
 		void addDelegate(CCMouseDelegate* pDelegate);
 
