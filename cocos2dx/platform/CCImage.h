@@ -197,8 +197,8 @@ protected:
 
 private:
     // noncopyable
-    CCImage(const CCImage&    rImg);
-    CCImage & operator=(const CCImage&);
+    // CCImage(const CCImage&    rImg);
+    // CCImage & operator=(const CCImage&);
 
 
 };

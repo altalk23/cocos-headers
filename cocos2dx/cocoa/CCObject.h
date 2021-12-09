@@ -56,11 +56,19 @@ class CCObject;
 class CCNode;
 class CCEvent;
 
+/*
+	Alk edits for cacao
+*/
+class CC_DLL CCDestructor {
+public:
+	~CCDestructor();
+};
+
 /**
  * @js NA
  * @lua NA
  */
-class CC_DLL CCCopying
+class CC_DLL CCCopying : CCDestructor
 {
 public:
     virtual CCObject* copyWithZone(CCZone* pZone);

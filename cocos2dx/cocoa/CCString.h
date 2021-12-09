@@ -59,7 +59,7 @@ public:
     /**
      * @lua NA
      */
-    CCString(const CCString& str);
+    // CCString(const CCString& str);
     /**
      * @lua NA
      */

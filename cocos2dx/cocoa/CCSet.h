@@ -48,7 +48,7 @@ public:
     /**
      * @lua NA
      */
-    CCSet(const CCSet &rSetObject);
+    // CCSet(const CCSet &rSetObject);
     /**
      * @js NA
      * @lua NA
