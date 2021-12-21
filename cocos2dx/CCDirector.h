@@ -377,8 +377,8 @@ public:
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenScaleFactorW, ScreenScaleFactorW);
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenScaleFactorH, ScreenScaleFactorH);
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenTop, ScreenTop);
-        CC_SYNTHESIZE_READONLY_NV(float, m_fScreenBottom, ScreenBottom);
-        CC_SYNTHESIZE_READONLY_NV(float, m_fScreenLeft, ScreenLeft);
+        CC_SYNTHESIZE_READONLY_NV_NC(float, m_fScreenBottom, ScreenBottom);
+        CC_SYNTHESIZE_READONLY_NV_NC(float, m_fScreenLeft, ScreenLeft);
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenRight, ScreenRight);
         CC_SYNTHESIZE_NV(CCScene*, m_pSceneReference, SceneReference);
     )

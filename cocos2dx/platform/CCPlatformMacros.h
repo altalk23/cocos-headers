@@ -169,6 +169,11 @@ public: virtual void set##funName(const varType& var);
 protected: varType varName;\
 public: virtual varType get##funName(void) const { return varName; }
 
+#define CC_SYNTHESIZE_READONLY_NC(varType, varName, funName)\
+protected: varType varName;\
+public: virtual varType get##funName(void) { return varName; }
+
+
 #define CC_SYNTHESIZE_READONLY_PASS_BY_REF(varType, varName, funName)\
 protected: varType varName;\
 public: virtual const varType& get##funName(void) const { return varName; }
@@ -313,5 +318,9 @@ public: void set##funName(varType var){ varName = var; }
 #define CC_SYNTHESIZE_READONLY_NV(varType, varName, funName)\
 protected: varType varName;\
 public: varType get##funName(void) const { return varName; }\
+
+#define CC_SYNTHESIZE_READONLY_NV_NC(varType, varName, funName)\
+protected: varType varName;\
+public: varType get##funName(void) { return varName; }\
 
 #endif // __CC_PLATFORM_MACROS_H__
