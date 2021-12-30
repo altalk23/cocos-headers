@@ -348,9 +348,6 @@ public:
 
     RT_ADD(
     public:
-        CCDirector(const CCDirector&);
-
-        CCDirector& operator=(const CCDirector&);
 
         void checkSceneReference(void);
 
