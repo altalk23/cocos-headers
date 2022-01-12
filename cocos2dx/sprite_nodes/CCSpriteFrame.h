@@ -54,6 +54,7 @@ class CCZone;
  */
 class CC_DLL CCSpriteFrame : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     // attributes
 

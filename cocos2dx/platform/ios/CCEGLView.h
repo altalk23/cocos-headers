@@ -34,6 +34,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCEGLView : public CCEGLViewProtocol
 {
+    friend class Cacao::interfaces;
 public:
     CCEGLView();
    ~CCEGLView();

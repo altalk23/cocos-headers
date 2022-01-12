@@ -45,6 +45,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCPageTurn3D : public CCGrid3DAction
 {
+    friend class Cacao::interfaces;
 public:
     virtual void update(float time);
 

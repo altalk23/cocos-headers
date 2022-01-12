@@ -10,6 +10,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCDevice
 {
+    friend class Cacao::interfaces;
 private:
     CCDevice();
 public:

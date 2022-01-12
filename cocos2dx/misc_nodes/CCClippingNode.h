@@ -40,6 +40,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCClippingNode : public CCNode
 {
+    friend class Cacao::interfaces;
 protected:
     CCNode* m_pStencil;
     GLfloat m_fAlphaThreshold;

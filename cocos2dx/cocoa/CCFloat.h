@@ -38,6 +38,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCFloat : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     CCFloat(float v)
         : m_fValue(v) {}

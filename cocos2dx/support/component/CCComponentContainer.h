@@ -37,6 +37,7 @@ class CCNode;
  */
 class CC_DLL CCComponentContainer
 {
+    friend class Cacao::interfaces;
 protected:
     CCComponentContainer(CCNode *pNode);
     

@@ -40,6 +40,7 @@ class CCGridBase;
 /** @brief Base class for Grid actions */
 class CC_DLL CCGridAction : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js NA
@@ -73,6 +74,7 @@ protected:
  */
 class CC_DLL CCGrid3DAction : public CCGridAction
 {
+    friend class Cacao::interfaces;
 public:
     /** returns the grid */
     virtual CCGridBase* getGrid(void);
@@ -94,6 +96,7 @@ public:
 /** @brief Base class for CCTiledGrid3D actions */
 class CC_DLL CCTiledGrid3DAction : public CCGridAction
 {
+    friend class Cacao::interfaces;
 public:
     /** returns the tile that belongs to a certain position of the grid */
     ccQuad3 tile(const CCPoint& position);
@@ -116,6 +119,7 @@ public:
 /** @brief CCAccelDeccelAmplitude action */
 class CC_DLL CCAccelDeccelAmplitude : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js NA
@@ -146,6 +150,7 @@ protected:
 /** @brief CCAccelAmplitude action */
 class CC_DLL CCAccelAmplitude : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js NA
@@ -175,6 +180,7 @@ protected:
 /** @brief CCDeccelAmplitude action */
 class CC_DLL CCDeccelAmplitude : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js NA
@@ -209,6 +215,7 @@ protected:
  */
 class CC_DLL CCStopGrid : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     virtual void startWithTarget(CCNode *pTarget);
 
@@ -220,6 +227,7 @@ public:
 /** @brief CCReuseGrid action */
 class CC_DLL CCReuseGrid : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /** initializes an action with the number of times that the current grid will be reused */
     bool initWithTimes(int times);

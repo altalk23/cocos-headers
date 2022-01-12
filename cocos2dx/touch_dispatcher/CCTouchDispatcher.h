@@ -71,6 +71,7 @@ struct ccTouchHandlerHelperData {
  */
 class CC_DLL EGLTouchDelegate
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @lua NA
@@ -115,6 +116,7 @@ struct _ccCArray;
  */
 class CC_DLL CCTouchDispatcher : public CCObject, public EGLTouchDelegate
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @lua NA

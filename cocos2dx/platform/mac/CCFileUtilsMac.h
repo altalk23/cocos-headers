@@ -40,6 +40,7 @@ NS_CC_BEGIN
 //! @brief  Helper class to handle file operations
 class CC_DLL CCFileUtilsMac : public CCFileUtils
 {
+    friend class Cacao::interfaces;
 public:
     /* override funtions */
     virtual gd::string getWritablePath();

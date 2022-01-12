@@ -43,6 +43,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCString : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @lua NA
@@ -59,7 +60,7 @@ public:
     /**
      * @lua NA
      */
-    // CCString(const CCString& str);
+    CCString(const CCString& str);
     /**
      * @lua NA
      */

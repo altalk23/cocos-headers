@@ -40,6 +40,7 @@ NS_CC_BEGIN
 */
 class CC_DLL CCProgressTo : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /** Initializes with a duration and a percent */
     bool initWithDuration(float duration, float fPercent);
@@ -65,6 +66,7 @@ protected:
 */
 class CC_DLL CCProgressFromTo : public CCActionInterval
 {
+    friend class Cacao::interfaces;
 public:
     /** Initializes the action with a duration, a "from" percentage and a "to" percentage */
     bool initWithDuration(float duration, float fFromPercentage, float fToPercentage);

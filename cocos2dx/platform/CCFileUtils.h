@@ -43,6 +43,7 @@ class CCArray;
 //! @brief  Helper class to handle file operations
 class CC_DLL CCFileUtils : public TypeInfo
 {
+    friend class Cacao::interfaces;
     friend class CCArray;
     friend class CCDictionary;
 public:

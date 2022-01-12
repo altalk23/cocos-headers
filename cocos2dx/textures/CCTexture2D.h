@@ -111,6 +111,7 @@ class CC_DLL CCTexture2D : public CCObject
 , public CCGLBufferedNode
 #endif // EMSCRIPTEN
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @js ctor

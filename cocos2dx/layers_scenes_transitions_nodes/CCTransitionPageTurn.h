@@ -48,6 +48,7 @@ is turned on in CCDirector using:
 */
 class CC_DLL CCTransitionPageTurn : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 protected:
     bool    m_bBack;
     

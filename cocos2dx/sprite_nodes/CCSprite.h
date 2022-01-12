@@ -84,6 +84,7 @@ class CC_DLL CCSprite : public CCNodeRGBA, public CCTextureProtocol
 , public CCGLBufferedNode
 #endif // EMSCRIPTEN
 {
+    friend class Cacao::interfaces;
 public:
     /// @{
     /// @name Creators

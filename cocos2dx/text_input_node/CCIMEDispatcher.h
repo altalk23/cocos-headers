@@ -41,6 +41,7 @@ NS_CC_BEGIN
 */
 class CC_DLL CCIMEDispatcher
 {
+    friend class Cacao::interfaces;
 public:
     ~CCIMEDispatcher();
 

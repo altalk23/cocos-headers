@@ -36,6 +36,7 @@ class CCRect;
 
 class CC_DLL CCApplication : public CCApplicationProtocol
 {
+    friend class Cacao::interfaces;
 public:
     CCApplication();
     virtual ~CCApplication();

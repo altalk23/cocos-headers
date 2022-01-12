@@ -127,6 +127,7 @@ enum {
 
 class CC_DLL CCNode : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     /// @{
     /// @name Constructor, Distructor and Initializers
@@ -1492,6 +1493,7 @@ protected:
  */
 class CC_DLL CCNodeRGBA : public CCNode, public CCRGBAProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor

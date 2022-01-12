@@ -44,6 +44,7 @@ class CCGLProgram;
  */
 class CC_DLL CCShaderCache : public CCObject 
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @js ctor

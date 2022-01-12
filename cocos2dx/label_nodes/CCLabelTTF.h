@@ -54,8 +54,11 @@ NS_CC_BEGIN
  * @endcode
  *
  */
+
 class CC_DLL CCLabelTTF : public CCSprite, public CCLabelProtocol
 {
+    friend class Cacao::interfaces;
+	friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor

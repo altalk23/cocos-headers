@@ -70,6 +70,7 @@ public:
  */
 class CC_DLL CCCopying : CCDestructor
 {
+    friend class Cacao::interfaces;
 public:
     virtual CCObject* copyWithZone(CCZone* pZone);
 };
@@ -79,6 +80,7 @@ public:
  */
 class CC_DLL CCObject : public CCCopying
 {
+    friend class Cacao::interfaces;
 public:
     // object id, CCScriptSupport need public m_uID
     unsigned int        m_uID;

@@ -32,6 +32,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCComponent : public CCObject
 {
+    friend class Cacao::interfaces;
 protected:
     CCComponent(void);
 public:

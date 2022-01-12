@@ -42,6 +42,7 @@ typedef unsigned char CC_XML_CHAR;
  */
 class CC_DLL CCSAXDelegator
 {
+    friend class Cacao::interfaces;
 public:
     virtual void startElement(void *ctx, const char *name, const char **atts) = 0;
     virtual void endElement(void *ctx, const char *name) = 0;
@@ -54,6 +55,7 @@ public:
  */
 class CC_DLL CCSAXParser
 {
+    friend class Cacao::interfaces;
     CCSAXDelegator*    m_pDelegator;
 public:
 

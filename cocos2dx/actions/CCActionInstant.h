@@ -44,6 +44,7 @@ the CCIntervalAction actions.
 */ 
 class CC_DLL CCActionInstant : public CCFiniteTimeAction //<NSCopying>
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -71,6 +72,7 @@ public:
 */
 class CC_DLL CCShow : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -103,6 +105,7 @@ public:
 */
 class CC_DLL CCHide : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -135,6 +138,7 @@ public:
 */
 class CC_DLL CCToggleVisibility : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -165,6 +169,7 @@ public:
  */
 class CC_DLL CCRemoveSelf : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
 	CCRemoveSelf(){}
 	virtual ~CCRemoveSelf(){}
@@ -188,6 +193,7 @@ protected:
 */
 class CC_DLL CCFlipX : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -225,6 +231,7 @@ protected:
 */
 class CC_DLL CCFlipY : public CCActionInstant
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -259,6 +266,7 @@ protected:
 */
 class CC_DLL CCPlace : public CCActionInstant //<NSCopying>
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -289,6 +297,7 @@ protected:
 */
 class CC_DLL CCCallFunc : public CCActionInstant //<NSCopying>
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -381,6 +390,7 @@ N means Node
 */
 class CC_DLL CCCallFuncN : public CCCallFunc, public TypeInfo
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * @js ctor
@@ -436,6 +446,7 @@ public:
 */
 class CC_DLL CCCallFuncND : public CCCallFuncN
 {
+    friend class Cacao::interfaces;
 public:
     virtual long getClassTypeInfo() {
         static const long id = cocos2d::getHashCodeByString(typeid(cocos2d::CCCallFunc).name());
@@ -470,6 +481,7 @@ O means Object.
 
 class CC_DLL CCCallFuncO : public CCCallFunc, public TypeInfo
 {
+    friend class Cacao::interfaces;
 public:
     CCCallFuncO();
     virtual ~CCCallFuncO();

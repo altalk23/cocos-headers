@@ -49,6 +49,7 @@ class CCNode;
 */
 class CC_DLL CCTransitionEaseScene// : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     /** returns the Ease action that will be performed on a linear action.
     @since v0.8.2
@@ -79,6 +80,7 @@ typedef enum {
 */
 class CC_DLL CCTransitionScene : public CCScene
 {
+    friend class Cacao::interfaces;
 
 protected:
     CCScene    * m_pInScene;
@@ -134,6 +136,7 @@ private:
 */
 class CC_DLL CCTransitionSceneOriented : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 protected:
     tOrientation m_eOrientation;
 
@@ -160,6 +163,7 @@ Rotate and zoom out the outgoing scene, and then rotate and zoom in the incoming
 */
 class CC_DLL CCTransitionRotoZoom : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -184,6 +188,7 @@ Zoom out and jump the outgoing scene, and then jump and zoom in the incoming
 */
 class CC_DLL CCTransitionJumpZoom : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -208,6 +213,7 @@ Move in from to the left the incoming scene.
 */
 class CC_DLL CCTransitionMoveInL : public CCTransitionScene, public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -238,6 +244,7 @@ Move in from to the right the incoming scene.
 */
 class CC_DLL CCTransitionMoveInR : public CCTransitionMoveInL
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -258,6 +265,7 @@ Move in from to the top the incoming scene.
 */
 class CC_DLL CCTransitionMoveInT : public CCTransitionMoveInL 
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -278,6 +286,7 @@ Move in from to the bottom the incoming scene.
 */
 class CC_DLL CCTransitionMoveInB : public CCTransitionMoveInL
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -298,6 +307,7 @@ Slide in the incoming scene from the left border.
 */
 class CC_DLL CCTransitionSlideInL : public CCTransitionScene, public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -331,6 +341,7 @@ Slide in the incoming scene from the right border.
 */
 class CC_DLL CCTransitionSlideInR : public CCTransitionSlideInL 
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -357,6 +368,7 @@ Slide in the incoming scene from the bottom border.
 */
 class CC_DLL CCTransitionSlideInB : public CCTransitionSlideInL
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -383,6 +395,7 @@ Slide in the incoming scene from the top border.
 */
 class CC_DLL CCTransitionSlideInT : public CCTransitionSlideInL
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -409,6 +422,7 @@ protected:
 */
 class CC_DLL CCTransitionShrinkGrow : public CCTransitionScene , public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -435,6 +449,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionFlipX : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -461,6 +476,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionFlipY : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -487,6 +503,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionFlipAngular : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -513,6 +530,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionZoomFlipX : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -539,6 +557,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionZoomFlipY : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -565,6 +584,7 @@ The front face is the outgoing scene and the back face is the incoming scene.
 */
 class CC_DLL CCTransitionZoomFlipAngular : public CCTransitionSceneOriented
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -590,6 +610,7 @@ Fade out the outgoing scene and then fade in the incoming scene.'''
 */
 class CC_DLL CCTransitionFade : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 protected:
     ccColor4B    m_tColor;
 
@@ -633,6 +654,7 @@ Cross fades two scenes using the CCRenderTexture object.
 */
 class CC_DLL CCTransitionCrossFade : public CCTransitionScene
 {
+    friend class Cacao::interfaces;
 public :
     /**
      *  @js ctor
@@ -665,6 +687,7 @@ Turn off the tiles of the outgoing scene in random order
 */
 class CC_DLL CCTransitionTurnOffTiles : public CCTransitionScene ,public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public :
     /**
      *  @js ctor
@@ -693,6 +716,7 @@ The odd columns goes upwards while the even columns goes downwards.
 */
 class CC_DLL CCTransitionSplitCols : public CCTransitionScene , public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -722,6 +746,7 @@ The odd rows goes to the left while the even rows goes to the right.
 */
 class CC_DLL CCTransitionSplitRows : public CCTransitionSplitCols
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -745,6 +770,7 @@ Fade the tiles of the outgoing scene from the left-bottom corner the to top-righ
 */
 class CC_DLL CCTransitionFadeTR : public CCTransitionScene , public CCTransitionEaseScene
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -775,6 +801,7 @@ Fade the tiles of the outgoing scene from the top-right corner to the bottom-lef
 */
 class CC_DLL CCTransitionFadeBL : public CCTransitionFadeTR
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -797,6 +824,7 @@ public:
 */
 class CC_DLL CCTransitionFadeUp : public CCTransitionFadeTR
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
@@ -819,6 +847,7 @@ public:
 */
 class CC_DLL CCTransitionFadeDown : public CCTransitionFadeTR
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor

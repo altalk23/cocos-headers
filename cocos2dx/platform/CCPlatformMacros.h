@@ -99,7 +99,7 @@ It's new in cocos2d-x since v0.99.5
 
 // namespace cocos2d {}
 #ifdef __cplusplus
-    #define NS_CC_BEGIN                     namespace cocos2d {
+    #define NS_CC_BEGIN                     namespace Cacao { struct interfaces; } namespace cocos2d {
     #define NS_CC_END                       }
     #define USING_NS_CC                     using namespace cocos2d
 #else

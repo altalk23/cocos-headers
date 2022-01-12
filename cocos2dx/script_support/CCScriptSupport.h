@@ -174,6 +174,7 @@ private:
  */
 class CC_DLL CCScriptEngineProtocol
 {
+    friend class Cacao::interfaces;
 public:
     virtual ~CCScriptEngineProtocol() {};
     
@@ -269,6 +270,7 @@ public:
  */
 class CC_DLL CCScriptEngineManager
 {
+    friend class Cacao::interfaces;
 public:
     ~CCScriptEngineManager(void);
     

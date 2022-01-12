@@ -45,6 +45,7 @@ class CCTouchDispatcher;
 
 class CC_DLL CCTouchDelegate
 {
+    friend class Cacao::interfaces;
 public:
 
     CCTouchDelegate() {}

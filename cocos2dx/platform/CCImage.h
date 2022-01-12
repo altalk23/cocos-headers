@@ -40,6 +40,7 @@ class CCFreeTypeFont;
 
 class CC_DLL CCImage : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     /**
      @js ctor

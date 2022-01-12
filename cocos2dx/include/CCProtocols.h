@@ -38,6 +38,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCRGBAProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /** 
      * Changes the color with R,G,B bytes
@@ -135,6 +136,7 @@ public:
  */
 class CC_DLL CCBlendProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * Sets the source blending function.
@@ -165,6 +167,7 @@ public:
  */
 class CC_DLL CCTextureProtocol : public CCBlendProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * Returns the currently used texture
@@ -190,6 +193,7 @@ public:
  */
 class CC_DLL CCLabelProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /**
      * Sets a new label using an string
@@ -213,6 +217,7 @@ public:
  */
 class CC_DLL CCDirectorDelegate
 {
+    friend class Cacao::interfaces;
 public:
     /** 
      * Will be called by CCDirector when the projection is updated, and "custom" projection is used

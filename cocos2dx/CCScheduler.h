@@ -51,6 +51,7 @@ class CCSet;
 //
 class CC_DLL CCTimer : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js  ctor
@@ -137,6 +138,7 @@ The 'custom selectors' should be avoided when possible. It is faster, and consum
 */
 class CC_DLL CCScheduler : public CCObject
 {
+    friend class Cacao::interfaces;
 public:
     CCScheduler();
     /**

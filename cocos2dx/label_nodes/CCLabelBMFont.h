@@ -109,6 +109,7 @@ typedef struct _KerningHashElement
 */
 class CC_DLL CCBMFontConfiguration : public CCObject
 {
+    friend class Cacao::interfaces;
     // XXX: Creating a public interface so that the bitmapFontArray[] is accessible
 public://@public
     // BMFont definitions
@@ -191,6 +192,7 @@ http://www.angelcode.com/products/bmfont/ (Free, Windows only)
 
 class CC_DLL CCLabelBMFont : public CCSpriteBatchNode, public CCLabelProtocol, public CCRGBAProtocol
 {
+    friend class Cacao::interfaces;
 public:
     /**
      *  @js ctor
