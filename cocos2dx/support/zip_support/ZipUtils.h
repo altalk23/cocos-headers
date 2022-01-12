@@ -172,7 +172,7 @@ namespace cocos2d
             static char hexToChar(gd::string*);
         )
 
-    private:
+    public:
         static int ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out, unsigned int *outLength, 
                                            unsigned int outLenghtHint);
         static inline void ccDecodeEncodedPvr (unsigned int *data, int len);
@@ -245,7 +245,7 @@ namespace cocos2d
         */
         unsigned char *getFileData(const gd::string &fileName, unsigned long *pSize);
 
-    private:
+    public:
         bool setFilter(const gd::string &filer, ZipFilePrivate *data);
         unsigned char *getFileData(const gd::string &fileName, unsigned long *pSize, ZipFilePrivate *data);
         

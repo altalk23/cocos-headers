@@ -58,7 +58,7 @@ public:
      */
     unsigned char* getFileDataForAsync(const char* pszFileName, const char* pszMode, unsigned long * pSize);
     
-private:
+public:
     unsigned char* doGetFileData(const char* pszFileName, const char* pszMode, unsigned long * pSize, bool forAsync);
 };
 
