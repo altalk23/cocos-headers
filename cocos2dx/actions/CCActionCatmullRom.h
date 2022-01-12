@@ -57,7 +57,7 @@ NS_CC_BEGIN;
  */
 class CC_DLL CCPointArray : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     
     /** creates and initializes a Points array with capacity 
@@ -119,7 +119,7 @@ private:
  */
 class CC_DLL CCCardinalSplineTo : public CCActionInterval
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     /** creates an action with a Cardinal Spline array of points and tension 
@@ -191,7 +191,7 @@ protected:
  */
 class CC_DLL CCCardinalSplineBy : public CCCardinalSplineTo 
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     
     /** creates an action with a Cardinal Spline array of points and tension 
@@ -226,7 +226,7 @@ protected:
  */
 class CC_DLL CCCatmullRomTo : public CCCardinalSplineTo
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     
     /** creates an action with a Cardinal Spline array of points and tension 
@@ -251,7 +251,7 @@ public:
  */
 class CC_DLL CCCatmullRomBy : public CCCardinalSplineBy
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     
     /** creates an action with a Cardinal Spline array of points and tension 

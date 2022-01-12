@@ -41,7 +41,7 @@ class CCRenderTexture;
 
 class CC_DLL CCTransitionProgress : public CCTransitionScene
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     static CCTransitionProgress* create(float t, CCScene* scene);
     /**
@@ -73,7 +73,7 @@ protected:
  */
 class CC_DLL CCTransitionProgressRadialCCW : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     static CCTransitionProgressRadialCCW* create(float t, CCScene* scene);
 protected:
@@ -87,7 +87,7 @@ protected:
 */
 class CC_DLL CCTransitionProgressRadialCW : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     static CCTransitionProgressRadialCW* create(float t, CCScene* scene);
 protected:
@@ -100,7 +100,7 @@ protected:
  */
 class CC_DLL CCTransitionProgressHorizontal : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     static CCTransitionProgressHorizontal* create(float t, CCScene* scene);
@@ -111,7 +111,7 @@ protected:
 
 class CC_DLL CCTransitionProgressVertical : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     static CCTransitionProgressVertical* create(float t, CCScene* scene);
@@ -122,7 +122,7 @@ protected:
 
 class CC_DLL CCTransitionProgressInOut : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     static CCTransitionProgressInOut* create(float t, CCScene* scene);
@@ -134,7 +134,7 @@ protected:
 
 class CC_DLL CCTransitionProgressOutIn : public CCTransitionProgress
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     static CCTransitionProgressOutIn* create(float t, CCScene* scene);

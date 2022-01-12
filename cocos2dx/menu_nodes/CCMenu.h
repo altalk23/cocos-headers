@@ -55,7 +55,7 @@ enum {
 */
 class CC_DLL CCMenu : public CCLayerRGBA
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
     /** whether or not the menu will receive events */
     bool m_bEnabled;
     

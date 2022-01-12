@@ -52,7 +52,7 @@ enum TargetPlatform
 
 class CC_DLL CCApplicationProtocol
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     virtual ~CCApplicationProtocol() {}

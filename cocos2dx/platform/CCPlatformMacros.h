@@ -98,8 +98,22 @@ It's new in cocos2d-x since v0.99.5
 // generic macros
 
 // namespace cocos2d {}
+/**
+ * Cacao specific:
+ * Since Cacao uses gd namespace for stl support, this needs to be reflected for
+ * classes using stl containers. Easiest way to hijack this is redefining the NS_CC_BEGIN
+ * macro.
+ */
+#if defined(CACAO_VERSION)
+    #define CACAO_ADD(...) __VA_ARGS__
+	#define NOT_CACAO_ADD(...) 
+#else
+	#define CACAO_ADD(...)
+	#define NOT_CACAO_ADD(...) __VA_ARGS__
+#endif
+
 #ifdef __cplusplus
-    #define NS_CC_BEGIN                     namespace Cacao { struct interfaces; } namespace cocos2d {
+    #define NS_CC_BEGIN                     CACAO_ADD(namespace Cacao { struct interfaces; }) NOT_CACAO_ADD(namespace gd = std;) namespace cocos2d {
     #define NS_CC_END                       }
     #define USING_NS_CC                     using namespace cocos2d
 #else
@@ -108,16 +122,7 @@ It's new in cocos2d-x since v0.99.5
     #define USING_NS_CC 
 #endif 
 
-/**
- * Cacao specific:
- * Since Cacao uses gd namespace for stl support, this needs to be reflected for
- * classes using stl containers. Easiest way to hijack this is redefining the NS_CC_BEGIN
- * macro.
- */
-#if !defined(CACAO_VERSION)
-    #undef NS_CC_BEGIN 
-    #define NS_CC_BEGIN namespace gd = std; namespace cocos2d {
-#endif
+
 
 /** CC_PROPERTY_READONLY is used to declare a protected variable.
  We can use getter to read the variable.

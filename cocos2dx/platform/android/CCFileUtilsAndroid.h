@@ -41,7 +41,7 @@ NS_CC_BEGIN
 //! @brief  Helper class to handle file operations
 class CC_DLL CCFileUtilsAndroid : public CCFileUtils
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class CCFileUtils;
     CCFileUtilsAndroid();
 public:

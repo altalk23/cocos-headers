@@ -42,7 +42,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCThread
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCThread() : m_pAutoreasePool(0) {}
     ~CCThread();

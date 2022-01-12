@@ -44,7 +44,7 @@ NS_CC_BEGIN
 */
 class CC_DLL CCTMXObjectGroup : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
     /** offset position of child objects */
     CC_SYNTHESIZE_PASS_BY_REF(CCPoint, m_tPositionOffset, PositionOffset);
     /** list of properties stored in a dictionary */

@@ -108,7 +108,7 @@ object->propertyNamed(name_of_the_property);
 */
 class CC_DLL CCTMXTiledMap : public CCNode
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
     /** the map's size property measured in tiles */
     CC_SYNTHESIZE_PASS_BY_REF(CCSize, m_tMapSize, MapSize);
     /** the tiles's size property measured in pixels */

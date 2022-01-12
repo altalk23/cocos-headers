@@ -55,7 +55,7 @@ class CCImage;
 */
 class CC_DLL CCTextureCache : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 protected:
     CCDictionary* m_pTextures;
     //pthread_mutex_t                *m_pDictLock;

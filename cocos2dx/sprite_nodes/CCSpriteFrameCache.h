@@ -57,7 +57,7 @@ class CCSprite;
  */
 class CC_DLL CCSpriteFrameCache : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 protected:
     // MARMALADE: Made this protected not private, as deriving from this class is pretty useful
     /**

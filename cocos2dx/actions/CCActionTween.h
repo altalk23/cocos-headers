@@ -36,7 +36,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCActionTweenDelegate
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js NA
@@ -66,7 +66,7 @@ public:
  */
 class CC_DLL CCActionTween : public CCActionInterval
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** creates an initializes the action with the property name (key), and the from and to parameters. */
     static CCActionTween* create(float aDuration, const char* key, float from, float to);

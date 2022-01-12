@@ -45,7 +45,7 @@ The children will be moved faster / slower than the parent according the the par
 */
 class CC_DLL CCParallaxNode : public CCNode 
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
     /** array that holds the offset / ratio of the children */
     CC_SYNTHESIZE(struct _ccArray *, m_pParallaxArray, ParallaxArray)
 

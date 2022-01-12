@@ -113,7 +113,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCArray : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @lua NA

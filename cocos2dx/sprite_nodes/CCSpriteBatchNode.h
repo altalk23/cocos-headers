@@ -62,7 +62,7 @@ class CCSprite;
 */
 class CC_DLL CCSpriteBatchNode : public CCNode, public CCTextureProtocol
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor

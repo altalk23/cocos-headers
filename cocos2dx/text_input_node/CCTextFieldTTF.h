@@ -42,7 +42,7 @@ class CCTextFieldTTF;
 
 class CC_DLL CCTextFieldDelegate
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
     @brief    If the sender doesn't want to attach to the IME, return true;
@@ -100,7 +100,7 @@ public:
 */
 class CC_DLL CCTextFieldTTF : public CCLabelTTF, public CCIMEDelegate
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @lua NA

@@ -37,7 +37,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCTouch : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor
@@ -92,7 +92,7 @@ private:
 
 class CC_DLL CCEvent : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 };
 
 // end of input group

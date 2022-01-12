@@ -54,7 +54,7 @@ class CCSpriteFrame;
  */
 class CC_DLL CCAnimationFrame : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor
@@ -96,7 +96,7 @@ You can animate a CCAnimation object by using the CCAnimate action. Example:
 */
 class CC_DLL CCAnimation : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor

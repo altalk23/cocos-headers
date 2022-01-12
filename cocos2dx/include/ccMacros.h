@@ -298,6 +298,7 @@ extern unsigned int CC_DLL g_uNumberOfDraws;
 */
 #define HJ_ADD(...) __VA_ARGS__
 
+
 /** PAD
 * Add padding to a class / struct. For shifting classes /
 * structs to be aligned, if too lazy to fully reverse.

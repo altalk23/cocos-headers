@@ -51,7 +51,7 @@ class CCGLProgram;
 */
 class CC_DLL CCGridBase : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js NA

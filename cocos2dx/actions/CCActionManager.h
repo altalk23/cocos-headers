@@ -56,7 +56,7 @@ struct _hashElement;
  */
 class CC_DLL CCActionManager : public CCObject
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor

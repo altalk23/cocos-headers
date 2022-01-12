@@ -43,7 +43,7 @@ class CCCamera;
 */
 class CC_DLL CCActionCamera : public CCActionInterval //<NSCopying> 
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -88,7 +88,7 @@ Orbits the camera around the center of the screen using spherical coordinates
 */
 class CC_DLL CCOrbitCamera : public CCActionCamera //<NSCopying> 
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor

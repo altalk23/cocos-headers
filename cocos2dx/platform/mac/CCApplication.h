@@ -33,7 +33,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCApplication : public CCApplicationProtocol
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCApplication();
     virtual ~CCApplication();

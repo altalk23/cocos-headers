@@ -59,18 +59,20 @@ class CCEvent;
 /*
 	Alk edits for cacao
 */
-class CC_DLL CCDestructor {
-public:
-	~CCDestructor();
-};
+CACAO_ADD(
+	class CC_DLL CCDestructor {
+	public:
+		~CCDestructor();
+	};
+)
 
 /**
  * @js NA
  * @lua NA
  */
-class CC_DLL CCCopying : CCDestructor
+class CC_DLL CCCopying CACAO_ADD(: CCDestructor)
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual CCObject* copyWithZone(CCZone* pZone);
 };
@@ -80,7 +82,7 @@ public:
  */
 class CC_DLL CCObject : public CCCopying
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     // object id, CCScriptSupport need public m_uID
     unsigned int        m_uID;

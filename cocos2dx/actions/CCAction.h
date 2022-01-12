@@ -48,7 +48,7 @@ enum {
  */
 class CC_DLL CCAction : public CCObject 
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor
@@ -139,7 +139,7 @@ protected:
  */
 class CC_DLL CCFiniteTimeAction : public CCAction
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -175,7 +175,7 @@ class CCRepeatForever;
  */
 class CC_DLL CCSpeed : public CCAction
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -233,7 +233,7 @@ Instead of using CCCamera as a "follower", use this action instead.
 */
 class CC_DLL CCFollow : public CCAction
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor

@@ -66,7 +66,7 @@ class CCParticleSystem;
 
 class CC_DLL CCParticleBatchNode : public CCNode, public CCTextureProtocol
 {
-    friend class Cacao::interfaces;
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor
