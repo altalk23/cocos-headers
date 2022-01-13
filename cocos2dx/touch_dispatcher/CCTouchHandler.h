@@ -46,6 +46,7 @@ NS_CC_BEGIN
 */
 class CC_DLL  CCTouchHandler : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual ~CCTouchHandler(void);
 
@@ -81,6 +82,7 @@ public:
  */
 class CC_DLL  CCStandardTouchHandler : public CCTouchHandler
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     ~CCStandardTouchHandler(void);
     
@@ -101,6 +103,7 @@ public:
  */
 class CC_DLL  CCTargetedTouchHandler : public CCTouchHandler
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     ~CCTargetedTouchHandler(void);
 

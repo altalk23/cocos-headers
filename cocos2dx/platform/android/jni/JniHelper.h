@@ -39,6 +39,7 @@ typedef struct JniMethodInfo_
 
 class CC_DLL JniHelper
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     static JavaVM* getJavaVM();
     static void setJavaVM(JavaVM *javaVM);

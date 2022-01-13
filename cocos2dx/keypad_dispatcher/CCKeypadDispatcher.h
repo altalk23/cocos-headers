@@ -50,6 +50,7 @@ struct _ccCArray;
 */
 class CC_DLL CCKeypadDispatcher : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCKeypadDispatcher();
     ~CCKeypadDispatcher();

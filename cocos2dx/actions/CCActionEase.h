@@ -44,6 +44,7 @@ class CCZone;
  */
 class CC_DLL CCActionEase : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js NA
@@ -80,6 +81,7 @@ public:
  */
 class CC_DLL CCEaseRateAction : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js NA
@@ -116,6 +118,7 @@ public:
  */
 class CC_DLL CCEaseIn : public CCEaseRateAction
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -136,6 +139,7 @@ public:
  */
 class CC_DLL CCEaseOut : public CCEaseRateAction
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse();
@@ -157,6 +161,7 @@ public:
  */
 class CC_DLL CCEaseInOut : public CCEaseRateAction
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     /**
@@ -178,6 +183,7 @@ public:
  */
 class CC_DLL CCEaseExponentialIn : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -198,6 +204,7 @@ public:
  */
 class CC_DLL CCEaseExponentialOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -218,6 +225,7 @@ public:
  */
 class CC_DLL CCEaseExponentialInOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     /**
@@ -239,6 +247,7 @@ public:
  */
 class CC_DLL CCEaseSineIn : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -259,6 +268,7 @@ public:
  */
 class CC_DLL CCEaseSineOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -280,6 +290,7 @@ public:
  */
 class CC_DLL CCEaseSineInOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     /**
@@ -302,6 +313,7 @@ public:
  */
 class CC_DLL CCEaseElastic : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** get period of the wave in radians. default is 0.3 */
     inline float getPeriod(void) { return m_fPeriod; }
@@ -335,6 +347,7 @@ public:
  */
 class CC_DLL CCEaseElasticIn : public CCEaseElastic
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -359,6 +372,7 @@ public:
  */
 class CC_DLL CCEaseElasticOut : public CCEaseElastic
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -383,6 +397,7 @@ public:
  */
 class CC_DLL CCEaseElasticInOut : public CCEaseElastic
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -406,6 +421,7 @@ public:
 */
 class CC_DLL CCEaseBounce : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     float bounceTime(float time);
     /**
@@ -429,6 +445,7 @@ public:
 */
 class CC_DLL CCEaseBounceIn : public CCEaseBounce
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -452,6 +469,7 @@ public:
  */
 class CC_DLL CCEaseBounceOut : public CCEaseBounce
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -475,6 +493,7 @@ public:
  */
 class CC_DLL CCEaseBounceInOut : public CCEaseBounce
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     /**
@@ -498,6 +517,7 @@ public:
  */
 class CC_DLL CCEaseBackIn : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -521,6 +541,7 @@ public:
  */
 class CC_DLL CCEaseBackOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -544,6 +565,7 @@ public:
  */
 class CC_DLL CCEaseBackInOut : public CCActionEase
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     /**

@@ -63,7 +63,8 @@ using the camera.
 */
 class CC_DLL CCCamera : public CCObject
 {
-public:
+    CACAO_ADD(friend class Cacao::interfaces;)
+protected:
     float m_fEyeX;
     float m_fEyeY;
     float m_fEyeZ;

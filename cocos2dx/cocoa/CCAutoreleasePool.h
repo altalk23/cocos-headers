@@ -38,6 +38,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCAutoreleasePool : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     CCArray*    m_pManagedObjectArray;    
 public:
     CCAutoreleasePool(void);
@@ -55,6 +56,7 @@ public:
  */
 class CC_DLL CCPoolManager
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     CCArray*    m_pReleasePoolStack;    
     CCAutoreleasePool*                    m_pCurReleasePool;
 

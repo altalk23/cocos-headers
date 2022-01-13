@@ -44,7 +44,12 @@ NS_CC_BEGIN
  */
 class CC_DLL CCDrawNode : public CCNodeRGBA
 {
+<<<<<<< HEAD
 public:
+=======
+    CACAO_ADD(friend class Cacao::interfaces;)
+protected:
+>>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
     GLuint      m_uVao;
     GLuint      m_uVbo;
     

@@ -43,6 +43,7 @@ class CCSet;
 
 class CC_DLL CCEGLViewProtocol
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @lua NA

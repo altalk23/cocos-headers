@@ -42,6 +42,7 @@ NS_CC_BEGIN
 //! @brief  Helper class to handle file operations
 class CC_DLL CCFileUtilsWinRT : public CCFileUtils
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class CCFileUtils;
     CCFileUtilsWinRT();
 public:

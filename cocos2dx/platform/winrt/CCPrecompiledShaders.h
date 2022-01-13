@@ -59,6 +59,7 @@ PrecompiledShader shaders[]  = {gFoo, gFoo};
 
 class CC_DLL CCPrecompiledShaders
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCPrecompiledShaders();
     virtual ~CCPrecompiledShaders();

@@ -49,6 +49,7 @@ class CCSize;
  */
 class CC_DLL CCPoint
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     float x;
     float y;
@@ -292,6 +293,7 @@ public:
  */
 class CC_DLL CCSize
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     float width;
     float height;
@@ -375,6 +377,7 @@ CCPoint& CCPoint::operator= (const CCSize& size) {
  */
 class CC_DLL CCRect
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCPoint origin;
     CCSize  size;

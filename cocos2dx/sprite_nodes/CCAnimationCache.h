@@ -49,6 +49,7 @@ Before v0.99.5, the recommend way was to save them on the CCSprite. Since v0.99.
 */
 class CC_DLL CCAnimationCache : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js ctor

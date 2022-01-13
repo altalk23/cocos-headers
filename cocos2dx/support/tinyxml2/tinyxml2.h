@@ -126,6 +126,7 @@ class XMLPrinter;
 */
 class CC_DLL StrPair
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     enum {
         NEEDS_ENTITY_PROCESSING			= 0x01,
@@ -190,6 +191,7 @@ public:
 template <class T, int INIT>
 class CC_DLL DynArray
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     DynArray< T, INIT >() {
         _mem = _pool;
@@ -281,6 +283,7 @@ public:
 */
 class CC_DLL MemPool
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     MemPool() {}
     virtual ~MemPool() {}
@@ -298,6 +301,7 @@ public:
 template< int SIZE >
 class CC_DLL MemPoolT : public MemPool
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     MemPoolT() : _root(0), _currentAllocs(0), _nAllocs(0), _maxAllocs(0), _nUntracked(0)	{}
     ~MemPoolT() {
@@ -404,6 +408,7 @@ public:
 */
 class CC_DLL XMLVisitor
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual ~XMLVisitor() {}
 
@@ -449,6 +454,7 @@ public:
 */
 class CC_DLL XMLUtil
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     // Anything in the high order range of UTF-8 is assumed to not be whitespace. This isn't
     // correct, but simple, and usually works.
@@ -542,6 +548,7 @@ public:
 */
 class CC_DLL XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLDocument;
     friend class XMLElement;
 public:
@@ -808,6 +815,7 @@ public:
 */
 class CC_DLL XMLText : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLBase;
     friend class XMLDocument;
 public:
@@ -847,6 +855,7 @@ public:
 /** An XML Comment. */
 class CC_DLL XMLComment : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLDocument;
 public:
     virtual XMLComment*	ToComment()					{
@@ -885,6 +894,7 @@ public:
 */
 class CC_DLL XMLDeclaration : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLDocument;
 public:
     virtual XMLDeclaration*	ToDeclaration()					{
@@ -917,6 +927,7 @@ public:
 */
 class CC_DLL XMLUnknown : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLDocument;
 public:
     virtual XMLUnknown*	ToUnknown()					{
@@ -976,6 +987,7 @@ enum XMLError {
 */
 class CC_DLL XMLAttribute
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLElement;
 public:
     /// The name of the attribute.
@@ -1077,6 +1089,7 @@ public:
 */
 class CC_DLL XMLElement : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLBase;
     friend class XMLDocument;
 public:
@@ -1359,6 +1372,7 @@ enum Whitespace {
 */
 class CC_DLL XMLDocument : public XMLNode
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
     friend class XMLElement;
 public:
     /// constructor
@@ -1615,6 +1629,7 @@ public:
 */
 class CC_DLL XMLHandle
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /// Create a handle from any node (at any depth of the tree.) This can be a null pointer.
     XMLHandle( XMLNode* node )												{
@@ -1699,6 +1714,7 @@ public:
 */
 class CC_DLL XMLConstHandle
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     XMLConstHandle( const XMLNode* node )											{
         _node = node;
@@ -1806,6 +1822,7 @@ public:
 */
 class CC_DLL XMLPrinter : public XMLVisitor
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** Construct the printer. If the FILE* is specified,
     	this will print to the FILE. Else it will print

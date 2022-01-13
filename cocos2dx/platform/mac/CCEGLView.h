@@ -36,6 +36,7 @@ class CCSize;
 
 class CC_DLL CCEGLView : public CCEGLViewProtocol
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     static CCEGLView* sharedOpenGLView(void);
     

@@ -69,6 +69,7 @@ All features from CCNode are valid, plus the following new features:
 class CC_DLL CCLayer : public CCNode, public CCTouchDelegate, public CCAccelerometerDelegate, public CCKeypadDelegate
     RT_ADD(, public CCKeyboardDelegate, public CCMouseDelegate)
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -224,6 +225,7 @@ public:
  */
 class CC_DLL CCLayerRGBA : public CCLayer, public CCRGBAProtocol
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CREATE_FUNC(CCLayerRGBA);
     /**
@@ -274,7 +276,12 @@ class CC_DLL CCLayerColor : public CCLayerRGBA, public CCBlendProtocol
 , public CCGLBufferedNode
 #endif // EMSCRIPTEN
 {
+<<<<<<< HEAD
 public:
+=======
+    CACAO_ADD(friend class Cacao::interfaces;)
+protected:
+>>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
     ccVertex2F m_pSquareVertices[4];
     ccColor4F  m_pSquareColors[4];
 
@@ -348,6 +355,7 @@ If ' compressedInterpolation' is enabled (default mode) you will see both the st
 */
 class CC_DLL CCLayerGradient : public CCLayerColor
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
 
     /** Creates a full-screen CCLayer with a gradient between start and end. */
@@ -396,7 +404,12 @@ Features:
 */
 class CC_DLL CCLayerMultiplex : public CCLayer
 {
+<<<<<<< HEAD
 public:
+=======
+    CACAO_ADD(friend class Cacao::interfaces;)
+protected:
+>>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
     unsigned int m_nEnabledLayer;
     CCArray*     m_pLayers;
 public:

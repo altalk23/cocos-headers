@@ -34,6 +34,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCNotificationCenter : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** CCNotificationCenter constructor */
     CCNotificationCenter();
@@ -119,6 +120,7 @@ public:
  */
 class CC_DLL CCNotificationObserver : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** @brief CCNotificationObserver constructor
      *  @param target The target which wants to observer notification events.

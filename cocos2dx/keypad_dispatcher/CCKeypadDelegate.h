@@ -39,6 +39,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCKeypadDelegate
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     // The back key clicked
     virtual void keyBackClicked() {}
@@ -56,6 +57,7 @@ public:
  */
 class CC_DLL CCKeypadHandler : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual ~CCKeypadHandler(void);
 

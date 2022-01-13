@@ -39,6 +39,7 @@ typedef std::set<CCObject *>::iterator CCSetIterator;
 
 class CC_DLL CCSet : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js  ctor

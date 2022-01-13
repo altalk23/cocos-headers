@@ -63,6 +63,7 @@ class CCSet;
  */
 class CC_DLL CCDataVisitor
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual ~CCDataVisitor() {}
 
@@ -85,6 +86,7 @@ public:
  */
 class CC_DLL CCPrettyPrinter : public CCDataVisitor
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCPrettyPrinter(int indentLevel = 0);
     

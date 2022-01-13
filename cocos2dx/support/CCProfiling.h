@@ -50,6 +50,7 @@ class CCProfilingTimer;
 
 class CC_DLL CCProfiler : public CCObject
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     ~CCProfiler(void);
     /** display the timers */

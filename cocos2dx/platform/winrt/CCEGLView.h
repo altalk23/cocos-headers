@@ -92,6 +92,7 @@ public:
 
 class CC_DLL CCEGLView : public CCEGLViewProtocol
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     CCEGLView();
     virtual ~CCEGLView();

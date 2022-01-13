@@ -60,6 +60,7 @@ CCAction *pingPongAction = CCSequence::actions(action, action->reverse(), NULL);
 */
 class CC_DLL CCActionInterval : public CCFiniteTimeAction
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** how many seconds had elapsed since the actions started to run. */
     inline float getElapsed(void) { return m_elapsed; }
@@ -98,6 +99,7 @@ public:
  */
 class CC_DLL CCSequence : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js NA
@@ -159,6 +161,7 @@ public:
  */
 class CC_DLL CCRepeat : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js NA
@@ -213,6 +216,7 @@ To repeat the an action for a limited number of times use the Repeat action.
 */
 class CC_DLL CCRepeatForever : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -266,6 +270,7 @@ public:
  */
 class CC_DLL CCSpawn : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      * @js NA
@@ -330,6 +335,7 @@ public:
 */ 
 class CC_DLL CCRotateTo : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** creates the action */
     static CCRotateTo* create(float fDuration, float fDeltaAngle);
@@ -361,6 +367,7 @@ public:
 */
 class CC_DLL CCRotateBy : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** creates the action */
     static CCRotateBy* create(float fDuration, float fDeltaAngle);
@@ -393,6 +400,7 @@ public:
  */
 class CC_DLL CCMoveBy : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action */
     bool initWithDuration(float duration, const CCPoint& deltaPosition);
@@ -421,6 +429,7 @@ public:
  */
 class CC_DLL CCMoveTo : public CCMoveBy
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action */
     bool initWithDuration(float duration, const CCPoint& position);
@@ -443,6 +452,7 @@ public:
 */
 class CC_DLL CCSkewTo : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -477,6 +487,7 @@ public:
 */
 class CC_DLL CCSkewBy : public CCSkewTo
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual bool initWithDuration(float t, float sx, float sy);
     virtual void startWithTarget(CCNode *pTarget);
@@ -492,6 +503,7 @@ public:
 */
 class CC_DLL CCJumpBy : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action */
     bool initWithDuration(float duration, const CCPoint& position, float height, unsigned int jumps);
@@ -519,6 +531,7 @@ public:
 */ 
 class CC_DLL CCJumpTo : public CCJumpBy
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void startWithTarget(CCNode *pTarget);
     /**
@@ -547,6 +560,7 @@ typedef struct _ccBezierConfig {
  */
 class CC_DLL CCBezierBy : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action with a duration and a bezier configuration 
      *  @lua NA
@@ -586,6 +600,7 @@ public:
  */
 class CC_DLL CCBezierTo : public CCBezierBy
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @lua NA
@@ -620,6 +635,7 @@ public:
  */
 class CC_DLL CCScaleTo : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action with the same scale factor for X and Y */
     bool initWithDuration(float duration, float s);
@@ -656,6 +672,7 @@ public:
 */
 class CC_DLL CCScaleBy : public CCScaleTo
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void startWithTarget(CCNode *pTarget);
     virtual CCActionInterval* reverse(void);
@@ -678,6 +695,7 @@ public:
 */
 class CC_DLL CCBlink : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action */
     bool initWithDuration(float duration, unsigned int uBlinks);
@@ -707,6 +725,7 @@ public:
  */
 class CC_DLL CCFadeIn : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -726,6 +745,7 @@ public:
 */
 class CC_DLL CCFadeOut : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -746,6 +766,7 @@ public:
  */
 class CC_DLL CCFadeTo : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action with duration and opacity */
     bool initWithDuration(float duration, GLubyte opacity);
@@ -771,6 +792,7 @@ public:
 */
 class CC_DLL CCTintTo : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action with duration and color */
     bool initWithDuration(float duration, GLubyte red, GLubyte green, GLubyte blue);
@@ -795,6 +817,7 @@ public:
  */
 class CC_DLL CCTintBy : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /** initializes the action with duration and color */
     bool initWithDuration(float duration, GLshort deltaRed, GLshort deltaGreen, GLshort deltaBlue);
@@ -824,6 +847,7 @@ public:
 */
 class CC_DLL CCDelayTime : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
@@ -848,6 +872,7 @@ public:
 */
 class CC_DLL CCReverseTime : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -882,6 +907,7 @@ class CCTexture2D;
 /** @brief Animates a sprite given the name of an Animation */
 class CC_DLL CCAnimate : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -922,6 +948,7 @@ public:
  */
 class CC_DLL CCTargetedAction : public CCActionInterval
 {
+    CACAO_ADD(friend class Cacao::interfaces;)
 public:
     /**
      *  @js ctor
