@@ -52,12 +52,10 @@ Special features and Limitations:
 */
 class CC_DLL CCParticleSystemQuad : public CCParticleSystem
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     ccV3F_C4B_T2F_Quad    *m_pQuads;        // quads to be rendered
     GLushort            *m_pIndices;    // indices
 

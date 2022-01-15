@@ -50,12 +50,10 @@ All features from CCNode are valid, plus the following features:
 */
 class CC_DLL CCAtlasNode : public CCNodeRGBA, public CCTextureProtocol
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
 
     //! chars per row
     unsigned int m_uItemsPerRow;

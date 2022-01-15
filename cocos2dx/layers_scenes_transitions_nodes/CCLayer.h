@@ -276,12 +276,10 @@ class CC_DLL CCLayerColor : public CCLayerRGBA, public CCBlendProtocol
 , public CCGLBufferedNode
 #endif // EMSCRIPTEN
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     ccVertex2F m_pSquareVertices[4];
     ccColor4F  m_pSquareColors[4];
 
@@ -404,12 +402,10 @@ Features:
 */
 class CC_DLL CCLayerMultiplex : public CCLayer
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     unsigned int m_nEnabledLayer;
     CCArray*     m_pLayers;
 public:

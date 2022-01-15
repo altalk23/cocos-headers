@@ -136,12 +136,10 @@ public:
 */
 class CC_DLL CCTransitionSceneOriented : public CCTransitionScene
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     tOrientation m_eOrientation;
 
 public:
@@ -614,12 +612,10 @@ Fade out the outgoing scene and then fade in the incoming scene.'''
 */
 class CC_DLL CCTransitionFade : public CCTransitionScene
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     ccColor4B    m_tColor;
 
 public:

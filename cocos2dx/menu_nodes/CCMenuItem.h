@@ -52,12 +52,10 @@ class CCSpriteFrame;
  */
 class CC_DLL CCMenuItem : public CCNodeRGBA
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     /** whether or not the item is selected
      @since v0.8.2
      */

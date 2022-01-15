@@ -55,12 +55,10 @@ To render the quads using an interleaved vertex array list, you should modify th
 */
 class CC_DLL CCTextureAtlas : public CCObject 
 {
-<<<<<<< HEAD
-public:
-=======
+
     CACAO_ADD(friend class Cacao::interfaces;)
 protected:
->>>>>>> 91b42a119a6a8f7a1e1e37eb0c89b467c6f3939f
+
     GLushort*           m_pIndices;
 #if CC_TEXTURE_ATLAS_USE_VAO
     GLuint              m_uVAOname;
