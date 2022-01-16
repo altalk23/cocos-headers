@@ -62,7 +62,7 @@ class CCDictionary;
  */
 class CC_DLL CCDictElement
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 private:
     /**
      *  Constructor of CCDictElement. It's only for internal usage. CCDictionary is its friend class.
@@ -174,7 +174,7 @@ public:
 
 class CC_DLL CCDictionary : public CCObject
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     /** 
      * The constructor of CCDictionary.

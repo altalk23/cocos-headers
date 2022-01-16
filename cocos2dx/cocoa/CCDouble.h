@@ -38,7 +38,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCDouble : public CCObject
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     CCDouble(double v)
         : m_dValue(v) {}

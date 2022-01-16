@@ -41,7 +41,7 @@ NS_CC_BEGIN
 */
 class CC_DLL CCIMEDispatcher
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     ~CCIMEDispatcher();
 

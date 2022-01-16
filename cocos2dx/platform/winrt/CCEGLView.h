@@ -92,7 +92,7 @@ private:
 
 class CC_DLL CCEGLView : public CCEGLViewProtocol
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     CCEGLView();
     virtual ~CCEGLView();

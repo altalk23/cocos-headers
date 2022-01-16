@@ -48,7 +48,7 @@ typedef struct
 */
 class CC_DLL CCIMEDelegate
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     virtual ~CCIMEDelegate();
 

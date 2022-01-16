@@ -32,7 +32,7 @@ namespace   cocos2d {
 
 class CC_DLL CCAccelerometer
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     CCAccelerometer();
     ~CCAccelerometer();

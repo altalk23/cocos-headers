@@ -42,7 +42,7 @@ class CCObject;
  */
 class CC_DLL CCZone
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     CCZone(CCObject *pObject = NULL);
 

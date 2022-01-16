@@ -52,7 +52,7 @@ class CCSpriteFrame;
  */
 class CC_DLL CCMenuItem : public CCNodeRGBA
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
     /** whether or not the item is selected
      @since v0.8.2
@@ -125,7 +125,7 @@ protected:
  */
 class CC_DLL CCMenuItemLabel : public CCMenuItem
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
     /** the color that will be used to disable the item */
     CC_PROPERTY_PASS_BY_REF(ccColor3B, m_tDisabledColor, DisabledColor);
     /** Label that is rendered. It can be any CCNode that implements the CCLabelProtocol */
@@ -175,7 +175,7 @@ protected:
  */
 class CC_DLL CCMenuItemAtlasFont : public CCMenuItemLabel
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -203,7 +203,7 @@ public:
  */
 class CC_DLL CCMenuItemFont : public CCMenuItemLabel
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     /**
      *  @js ctor
@@ -274,7 +274,7 @@ protected:
  */
 class CC_DLL CCMenuItemSprite : public CCMenuItem
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
     /** the image used when the item is not selected */
     CC_PROPERTY(CCNode*, m_pNormalImage, NormalImage);
     /** the image used when the item is selected */
@@ -327,7 +327,7 @@ protected:
  */
 class CC_DLL CCMenuItemImage : public CCMenuItemSprite
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     /**
      * @js ctor
@@ -376,7 +376,7 @@ public:
  */
 class CC_DLL CCMenuItemToggle : public CCMenuItem
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
     /** returns the selected item */
     CC_PROPERTY(unsigned int, m_uSelectedIndex, SelectedIndex);
     /** CCMutableArray that contains the subitems. You can add/remove items in runtime, and you can replace the array with a new one.

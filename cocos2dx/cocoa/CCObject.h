@@ -72,7 +72,7 @@ CACAO_ADD(
  */
 class CC_DLL CCCopying CACAO_ADD(: CCDestructor)
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     virtual CCObject* copyWithZone(CCZone* pZone);
 };
@@ -82,7 +82,7 @@ public:
  */
 class CC_DLL CCObject : public CCCopying
 {
-    CACAO_ADD(friend class Cacao::interfaces;)
+    CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     // object id, CCScriptSupport need public m_uID
     unsigned int        m_uID;
