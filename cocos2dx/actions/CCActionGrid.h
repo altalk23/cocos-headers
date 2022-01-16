@@ -64,7 +64,7 @@ public:
 
     /** creates the action with size and duration */
     static CCGridAction* create(float duration, const CCSize& gridSize);
-protected:
+public:
     CCSize m_sGridSize;
 };
 
@@ -142,7 +142,7 @@ public:
     /** creates the action with an inner action that has the amplitude property, and a duration time */
     static CCAccelDeccelAmplitude* create(CCAction *pAction, float duration);
 
-protected:
+public:
     float m_fRate;
     CCActionInterval *m_pOther;
 };
@@ -172,7 +172,7 @@ public:
 public:
     /** creates the action with an inner action that has the amplitude property, and a duration time */
     static CCAccelAmplitude* create(CCAction *pAction, float duration);
-protected:
+public:
     float m_fRate;
     CCActionInterval *m_pOther;
 };
@@ -203,7 +203,7 @@ public:
     /** creates the action with an inner action that has the amplitude property, and a duration time */
     static CCDeccelAmplitude* create(CCAction *pAction, float duration);
 
-protected:
+public:
     float m_fRate;
     CCActionInterval *m_pOther;
 };
@@ -237,7 +237,7 @@ public:
 public:
     /** creates an action with the number of times that the current grid will be reused */
     static CCReuseGrid* create(int times);
-protected:
+public:
     int m_nTimes;
 };
 

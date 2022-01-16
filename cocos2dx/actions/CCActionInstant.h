@@ -182,7 +182,7 @@ public:
 	static CCRemoveSelf * create(bool isNeedCleanUp = true);
 	/** init the action */
 	bool init(bool isNeedCleanUp);
-protected:
+public:
 	bool m_bIsNeedCleanUp;
 };
 
@@ -220,7 +220,7 @@ public:
      */
     virtual CCObject* copyWithZone(CCZone *pZone);
 
-protected:
+public:
     bool    m_bFlipX;
 };
 
@@ -258,7 +258,7 @@ public:
      */
     virtual CCObject* copyWithZone(CCZone *pZone);
 
-protected:
+public:
     bool    m_bFlipY;
 };
 
@@ -289,7 +289,7 @@ public:
      *  @lua NA
      */
     virtual CCObject* copyWithZone(CCZone *pZone);
-protected:
+public:
     CCPoint m_tPosition;
 };
 
@@ -368,7 +368,7 @@ public:
      * @lua NA
      */
     inline int getScriptHandler() { return m_nScriptHandler; };
-protected:
+public:
     /** Target that will be called */
     CCObject*   m_pSelectorTarget;
 
@@ -466,7 +466,7 @@ public:
     virtual CCObject* copyWithZone(CCZone *pZone);
     virtual void execute();
 
-protected:
+public:
     void            *m_pData;
 };
 
@@ -525,7 +525,7 @@ public:
         }
     }
 
-protected:
+public:
     /** object to be passed as argument */
     CCObject* m_pObject;
 };

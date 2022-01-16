@@ -53,6 +53,7 @@ class CC_DLL CCAtlasNode : public CCNodeRGBA, public CCTextureProtocol
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
 
+
     //! chars per row
     unsigned int m_uItemsPerRow;
     //! chars per column

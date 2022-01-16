@@ -39,6 +39,7 @@ class CC_DLL CCComponentContainer
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     CCComponentContainer(CCNode *pNode);
     
 public:
@@ -52,10 +53,10 @@ public:
 public:
     bool isEmpty() const;
     
-private:
+public:
     void alloc(void);
     
-private:
+public:
     CCDictionary *m_pComponents;        ///< Dictionary of components
     CCNode *m_pOwner;
     

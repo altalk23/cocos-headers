@@ -46,6 +46,7 @@ class CC_DLL CCDrawNode : public CCNodeRGBA
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     GLuint      m_uVao;
     GLuint      m_uVbo;
     
@@ -98,7 +99,7 @@ public:
      * @js NA
      */
     void listenBackToForeground(CCObject *obj);
-private:
+public:
     void ensureCapacity(unsigned int count);
     void render();
 };

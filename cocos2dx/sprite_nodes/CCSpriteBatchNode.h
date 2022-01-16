@@ -153,7 +153,7 @@ public:
     virtual void sortAllChildren();
     virtual void draw(void);
 
-protected:
+public:
     /** Inserts a quad at a certain index into the texture atlas. The CCSprite won't be added into the children array.
      This method should be called only when you are dealing with very big AtlasSrite and when most of the CCSprite won't be updated.
      For example: a tile map (CCTMXMap) or a label with lots of characters (CCLabelBMFont)
@@ -175,17 +175,17 @@ protected:
     public:
         int getUsedAtlasCapacity(void);
         void increaseAtlasCapacity(unsigned int);
-    protected:
+    public:
         void manualSortAllChildren(void);
         void setManualSortChildren(bool);
     );
 
-private:
+public:
     void updateAtlasIndex(CCSprite* sprite, int* curIndex);
     void swap(int oldIndex, int newIndex);
     void updateBlendFunc();
 
-protected:
+public:
     CCTextureAtlas *m_pobTextureAtlas;
     ccBlendFunc m_blendFunc;
 

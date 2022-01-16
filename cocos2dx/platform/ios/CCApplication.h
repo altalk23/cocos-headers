@@ -78,7 +78,7 @@ public:
     //Robtop modification
     virtual void openURL(char const* link);
 
-protected:
+public:
     static CCApplication * sm_pSharedApplication;
 };
 

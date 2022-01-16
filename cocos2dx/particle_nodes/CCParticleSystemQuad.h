@@ -54,6 +54,7 @@ class CC_DLL CCParticleSystemQuad : public CCParticleSystem
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     ccV3F_C4B_T2F_Quad    *m_pQuads;        // quads to be rendered
     GLushort            *m_pIndices;    // indices
 
@@ -134,7 +135,7 @@ public:
 
     static CCParticleSystemQuad * create();
     static CCParticleSystemQuad * createWithTotalParticles(unsigned int numberOfParticles);
-private:
+public:
 #if CC_TEXTURE_ATLAS_USE_VAO
     void setupVBOandVAO();
 #else

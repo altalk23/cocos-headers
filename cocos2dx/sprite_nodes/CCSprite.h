@@ -510,7 +510,7 @@ public:
     
     /// @} End of Sprite properties getter/setters
     
-protected:
+public:
     void updateColor(void);
     RT_REMOVE(  virtual void setTextureCoords(CCRect rect);         )
     RT_ADD(     virtual void setTextureCoords(const CCRect& rect);  )

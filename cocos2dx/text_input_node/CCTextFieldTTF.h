@@ -145,7 +145,7 @@ public:
 public:
     virtual void setString(const char *text);
     virtual const char* getString(void);
-protected:
+public:
     gd::string * m_pInputText;
 
     // place holder text property
@@ -153,15 +153,15 @@ protected:
 public:
     virtual void setPlaceHolder(const char * text);
     virtual const char * getPlaceHolder(void);
-protected:
+public:
     gd::string * m_pPlaceHolder;
     ccColor3B m_ColorSpaceHolder;
 public:
     virtual void setSecureTextEntry(bool value);
     virtual bool isSecureTextEntry();
-protected:
+public:
     bool m_bSecureTextEntry;
-protected:
+public:
 
     virtual void draw();
 
@@ -174,7 +174,7 @@ protected:
     virtual void insertText(const char * text, int len);
     virtual void deleteBackward();
     virtual const char * getContentText();
-private:
+public:
     class LengthStack;
     LengthStack * m_pLens;
 };

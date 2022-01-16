@@ -43,7 +43,7 @@ public:
      */
     virtual TargetPlatform getTargetPlatform();
 
-protected:
+public:
     static CCApplication * sm_pSharedApplication;
 };
 

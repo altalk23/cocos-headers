@@ -80,7 +80,7 @@ public:
         return m_startupScriptFilename;
     }
 
-protected:
+public:
     LARGE_INTEGER       m_nAnimationInterval;
     gd::string         m_resourceRootPath;
     gd::string         m_startupScriptFilename;

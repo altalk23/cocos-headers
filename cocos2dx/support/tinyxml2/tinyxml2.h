@@ -167,7 +167,7 @@ public:
     char* ParseText( char* in, const char* endTag, int strFlags );
     char* ParseName( char* in );
 
-private:
+public:
     void Reset();
     void CollapseWhitespace();
 
@@ -256,7 +256,7 @@ public:
         return _mem;
     }
 
-private:
+public:
     void EnsureCapacity( int cap ) {
         if ( cap > _allocated ) {
             int newAllocated = cap * 2;
@@ -368,7 +368,7 @@ public:
 
     enum { COUNT = 1024/SIZE }; // Some compilers do not accept to use COUNT in private part if COUNT is private
 
-private:
+public:
     union Chunk {
         Chunk*  next;
         char    mem[SIZE];
@@ -779,7 +779,7 @@ public:
     // internal
     virtual char* ParseDeep( char*, StrPair* );
 
-protected:
+public:
     XMLNode( XMLDocument* );
     virtual ~XMLNode();
     XMLNode( const XMLNode& );	// not supported
@@ -795,7 +795,7 @@ protected:
     XMLNode*		_prev;
     XMLNode*		_next;
 
-private:
+public:
     MemPool*		_memPool;
     void Unlink( XMLNode* child );
 };
@@ -841,13 +841,13 @@ public:
     virtual XMLNode* ShallowClone( XMLDocument* document ) const;
     virtual bool ShallowEqual( const XMLNode* compare ) const;
 
-protected:
+public:
     XMLText( XMLDocument* doc )	: XMLNode( doc ), _isCData( false )	{}
     virtual ~XMLText()												{}
     XMLText( const XMLText& );	// not supported
     XMLText& operator=( const XMLText& );	// not supported
 
-private:
+public:
     bool _isCData;
 };
 
@@ -871,13 +871,13 @@ public:
     virtual XMLNode* ShallowClone( XMLDocument* document ) const;
     virtual bool ShallowEqual( const XMLNode* compare ) const;
 
-protected:
+public:
     XMLComment( XMLDocument* doc );
     virtual ~XMLComment();
     XMLComment( const XMLComment& );	// not supported
     XMLComment& operator=( const XMLComment& );	// not supported
 
-private:
+public:
 };
 
 
@@ -910,7 +910,7 @@ public:
     virtual XMLNode* ShallowClone( XMLDocument* document ) const;
     virtual bool ShallowEqual( const XMLNode* compare ) const;
 
-protected:
+public:
     XMLDeclaration( XMLDocument* doc );
     virtual ~XMLDeclaration();
     XMLDeclaration( const XMLDeclaration& );	// not supported
@@ -943,7 +943,7 @@ public:
     virtual XMLNode* ShallowClone( XMLDocument* document ) const;
     virtual bool ShallowEqual( const XMLNode* compare ) const;
 
-protected:
+public:
     XMLUnknown( XMLDocument* doc );
     virtual ~XMLUnknown();
     XMLUnknown( const XMLUnknown& );	// not supported
@@ -1064,7 +1064,7 @@ public:
     /// Set the attribute to value.
     void SetAttribute( float value );
 
-private:
+public:
     enum { BUF_SIZE = 200 };
 
     XMLAttribute() : _next( 0 ) {}
@@ -1340,7 +1340,7 @@ public:
     virtual XMLNode* ShallowClone( XMLDocument* document ) const;
     virtual bool ShallowEqual( const XMLNode* compare ) const;
 
-private:
+public:
     XMLElement( XMLDocument* doc );
     virtual ~XMLElement();
     XMLElement( const XMLElement& );	// not supported
@@ -1552,7 +1552,7 @@ public:
         return false;
     }
 
-private:
+public:
     XMLDocument( const XMLDocument& );	// not supported
     void operator=( const XMLDocument& );	// not supported
     void InitDocument();
@@ -1703,7 +1703,7 @@ public:
         return ( ( _node && _node->ToDeclaration() ) ? _node->ToDeclaration() : 0 );
     }
 
-private:
+public:
     XMLNode* _node;
 };
 
@@ -1773,7 +1773,7 @@ public:
         return ( ( _node && _node->ToDeclaration() ) ? _node->ToDeclaration() : 0 );
     }
 
-private:
+public:
     const XMLNode* _node;
 };
 
@@ -1896,7 +1896,7 @@ public:
         return _buffer.Size();
     }
 
-private:
+public:
     void SealElement();
     void PrintSpace( int depth );
     void PrintString( const char*, bool restrictedEntitySet );	// prints out, after detecting entities.

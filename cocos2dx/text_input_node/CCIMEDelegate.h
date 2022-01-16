@@ -55,7 +55,7 @@ public:
     virtual bool attachWithIME();
     virtual bool detachWithIME();
 
-protected:
+public:
     friend class CCIMEDispatcher;
 
     /**
@@ -102,7 +102,7 @@ protected:
     virtual void keyboardWillHide(CCIMEKeyboardNotificationInfo& info)   {CC_UNUSED_PARAM(info);}
     virtual void keyboardDidHide(CCIMEKeyboardNotificationInfo& info)    {CC_UNUSED_PARAM(info);}
 
-protected:
+public:
     CCIMEDelegate();
 };
 

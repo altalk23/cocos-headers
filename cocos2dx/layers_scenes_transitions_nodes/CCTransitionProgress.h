@@ -58,7 +58,7 @@ public:
      *  @lua NA
      */
     virtual void onExit();
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
     virtual void setupTransition();
     virtual void sceneOrder();
@@ -76,7 +76,7 @@ class CC_DLL CCTransitionProgressRadialCCW : public CCTransitionProgress
     CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     static CCTransitionProgressRadialCCW* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
   
 };
@@ -90,7 +90,7 @@ class CC_DLL CCTransitionProgressRadialCW : public CCTransitionProgress
     CACAO_ADD(friend struct Cacao::interfaces;)
 public:
     static CCTransitionProgressRadialCW* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
 
 };
@@ -104,7 +104,7 @@ class CC_DLL CCTransitionProgressHorizontal : public CCTransitionProgress
 public:
 
     static CCTransitionProgressHorizontal* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
 
 };
@@ -115,7 +115,7 @@ class CC_DLL CCTransitionProgressVertical : public CCTransitionProgress
 public:
 
     static CCTransitionProgressVertical* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
 
 };
@@ -126,7 +126,7 @@ class CC_DLL CCTransitionProgressInOut : public CCTransitionProgress
 public:
 
     static CCTransitionProgressInOut* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
     virtual void sceneOrder();
     virtual void setupTransition();
@@ -138,7 +138,7 @@ class CC_DLL CCTransitionProgressOutIn : public CCTransitionProgress
 public:
 
     static CCTransitionProgressOutIn* create(float t, CCScene* scene);
-protected:
+public:
     virtual CCProgressTimer* progressTimerNodeWithRenderTexture(CCRenderTexture* texture);
 
 };

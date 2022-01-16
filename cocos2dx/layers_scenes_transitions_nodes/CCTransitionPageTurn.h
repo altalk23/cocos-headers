@@ -50,6 +50,7 @@ class CC_DLL CCTransitionPageTurn : public CCTransitionScene
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     bool    m_bBack;
     
 public:
@@ -84,7 +85,7 @@ public:
      */
     virtual void onEnter();
 
-protected:
+public:
     virtual void sceneOrder();
 };
 

@@ -25,19 +25,19 @@ RT_ADD(
 
 		bool dispatchKeyboardMSG(enumKeyCodes key, bool);
 		
-		bool getAltKeyPressed() const;
+		inline bool getAltKeyPressed() const {return m_bAltPressed;}
 
-		bool getCommandKeyPressed() const;
+		inline bool getCommandKeyPressed() const {return m_bCommandPressed;}
 
-		bool getControlKeyPressed() const;
+		inline bool getControlKeyPressed() const {return m_bControlPressed;}
 
-		bool getShiftKeyPressed() const;
+		inline bool getShiftKeyPressed() const {return m_bShiftPressed;}
 
 		const char* keyToString(enumKeyCodes key);
 
 		void updateModifierKeys(bool shft, bool ctrl, bool alt, bool cmd);
 
-	protected:
+	public:
 		CCArray* m_pDelegates;		// 0x20
 		bool m_bUnknown24;			// 0x24
 		bool m_bUnknown25;			// 0x25

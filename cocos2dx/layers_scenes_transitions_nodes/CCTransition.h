@@ -82,7 +82,7 @@ class CC_DLL CCTransitionScene : public CCScene
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 
-protected:
+public:
     CCScene    * m_pInScene;
     CCScene    * m_pOutScene;
     float    m_fDuration;
@@ -124,9 +124,9 @@ public:
     /** used by some transitions to hide the outer scene */
     void hideOutShowIn(void);
 
-protected:
+public:
     virtual void sceneOrder();
-private:
+public:
     void setNewScene(float dt);
 
 };
@@ -138,6 +138,7 @@ class CC_DLL CCTransitionSceneOriented : public CCTransitionScene
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     tOrientation m_eOrientation;
 
 public:
@@ -332,7 +333,7 @@ public:
     virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
 
     static CCTransitionSlideInL* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -359,7 +360,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInR* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -386,7 +387,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInB* create(float t, CCScene* scene);
-protected: 
+public: 
     virtual void sceneOrder();
 };
 
@@ -413,7 +414,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInT* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -612,6 +613,7 @@ class CC_DLL CCTransitionFade : public CCTransitionScene
 {
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
+
     ccColor4B    m_tColor;
 
 public:
@@ -707,7 +709,7 @@ public :
 
 public:
     static CCTransitionTurnOffTiles* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -792,7 +794,7 @@ public:
 public:
 
     static CCTransitionFadeTR* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 

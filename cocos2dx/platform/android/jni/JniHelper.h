@@ -48,7 +48,7 @@ public:
     static bool getMethodInfo(JniMethodInfo &methodinfo, const char *className, const char *methodName, const char *paramCode);
     static gd::string jstring2string(jstring str);
 
-private:
+public:
     static JavaVM *m_psJavaVM;
 };
 
