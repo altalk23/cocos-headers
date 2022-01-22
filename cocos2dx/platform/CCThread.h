@@ -49,7 +49,7 @@ public:
 
     void createAutoreleasePool();
 
-public:
+private:
     void *m_pAutoreasePool;
 };
 

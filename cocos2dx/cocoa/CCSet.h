@@ -113,7 +113,7 @@ public:
      */
     virtual void acceptVisitor(CCDataVisitor &visitor);
 
-public:
+private:
     std::set<CCObject *> *m_pSet;
 };
 

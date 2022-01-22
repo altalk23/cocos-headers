@@ -165,9 +165,9 @@ public:
     const char* getFontName();
     void setFontName(const char *fontName);
     
-public:
+private:
     bool updateTexture();
-public:
+protected:
     
     /** set the text definition for this label */
     void                _updateWithTextDefinition(ccFontDefinition & textDefinition, bool mustUpdateTexture = true);

@@ -55,6 +55,7 @@ class CC_DLL CCMenuItem : public CCNodeRGBA
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
 
+
     /** whether or not the item is selected
      @since v0.8.2
      */
@@ -111,7 +112,7 @@ public:
     /** set the target/selector of the menu item*/
     void setTarget(CCObject *rec, SEL_MenuHandler selector);
 
-public:
+protected:
     CCObject*       m_pListener;
     SEL_MenuHandler    m_pfnSelector;
     int             m_nScriptTapHandler;
@@ -165,7 +166,7 @@ public:
      */
     virtual void setEnabled(bool enabled);
     
-public:
+protected:
     ccColor3B    m_tColorBackup;
     float        m_fOriginalScale;
 };
@@ -257,7 +258,7 @@ public:
      */
     const char* fontNameObj();
     
-public:
+protected:
     void recreateLabel();
     
     unsigned int m_uFontSize;
@@ -313,7 +314,7 @@ public:
     virtual void unselected();
     virtual void setEnabled(bool bEnabled);
     
-public:
+protected:
     virtual void updateImagesVisibility();
 };
 

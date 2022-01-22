@@ -80,7 +80,7 @@ public:
     */
     bool dispatchKeypadMSG(ccKeypadMSGType nMsgType);
 
-public:
+protected:
 
     CCArray* m_pDelegates;
     bool m_bLocked;

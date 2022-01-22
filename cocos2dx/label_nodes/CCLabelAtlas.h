@@ -97,7 +97,7 @@ public:
     virtual void draw();
 #endif
 
-public:
+protected:
     // string to render
     gd::string m_sString;
     // the first char in the charmap

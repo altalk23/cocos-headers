@@ -102,7 +102,7 @@ public:
     virtual void visit(const CCArray *p);
     virtual void visit(const CCDictionary *p);
     virtual void visit(const CCSet *p);
-public:
+private:
     void setIndentLevel(int indentLevel);
     int _indentLevel;
     gd::string _indentStr;

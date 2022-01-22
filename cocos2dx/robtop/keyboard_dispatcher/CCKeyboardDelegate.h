@@ -204,7 +204,7 @@ RT_ADD(
 
 		void setDelegate(CCKeyboardDelegate* pDelegate);
 
-	public:
+	protected:
 		CCKeyboardDelegate* m_pDelegate;
 	};
 

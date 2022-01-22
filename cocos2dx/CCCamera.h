@@ -134,7 +134,7 @@ public:
     /** returns the Z eye */
     static float getZEye();
 
-public:
+private:
     DISALLOW_COPY_AND_ASSIGN(CCCamera);
 };
 

@@ -13,6 +13,7 @@ class CC_DLL CCDevice
     CACAO_ADD(friend struct Cacao::interfaces;)
 private:
 
+
     CCDevice();
 public:
     /**

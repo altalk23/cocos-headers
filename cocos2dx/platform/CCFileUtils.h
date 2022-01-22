@@ -335,7 +335,7 @@ public:
     virtual void setPopupNotify(bool bNotify);
     virtual bool isPopupNotify();
 
-public:
+protected:
     /**
      *  The default constructor.
      */

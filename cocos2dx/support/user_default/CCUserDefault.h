@@ -113,7 +113,7 @@ public:
     const static gd::string& getXMLFilePath();
     static bool isXMLFileExist();
 
-public:
+private:
     CCUserDefault();
     static bool createXMLFile();
     static void initXMLFilePath();

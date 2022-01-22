@@ -175,10 +175,10 @@ public:
      * Get scale factor of the vertical direction.
      */
     float getScaleY() const;
-public:
+private:
     void getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[], float xs[], float ys[]);
 
-public:
+protected:
     EGLTouchDelegate* m_pDelegate;
 
     // real screen size

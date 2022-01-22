@@ -108,7 +108,7 @@ public:
     const gd::vector<CCPoint*>* getControlPoints();
 
     void setControlPoints(gd::vector<CCPoint*> *controlPoints);
-public:
+private:
     /** Array that contains the control points */
     gd::vector<CCPoint*> *m_pControlPoints;
 };
@@ -176,7 +176,7 @@ public:
         m_pPoints = points;
     }
     
-public:
+protected:
     /** Array of control points */
     CCPointArray *m_pPoints;
     float m_fDeltaT;
@@ -215,7 +215,7 @@ public:
      *  @lua NA
      */
     virtual void updatePosition(CCPoint &newPos);
-public:
+protected:
     CCPoint m_startPosition;
 };
 

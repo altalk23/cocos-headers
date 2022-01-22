@@ -66,7 +66,7 @@ public:
         return m_startupScriptFilename;
     }
 
-public:
+protected:
     HINSTANCE           m_hInstance;
     HACCEL              m_hAccelTable;
     LARGE_INTEGER       m_nAnimationInterval;

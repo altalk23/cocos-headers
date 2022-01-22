@@ -31,7 +31,7 @@ public:
      */
     virtual void acceptVisitor(CCDataVisitor &visitor) { visitor.visit(this); }
 
-public:
+private:
     int m_nValue;
 };
 

@@ -43,6 +43,7 @@ class CC_DLL CCClippingNode : public CCNode
     CACAO_ADD(friend struct Cacao::interfaces;)
 protected:
 
+
     CCNode* m_pStencil;
     GLfloat m_fAlphaThreshold;
     bool    m_bInverted;
@@ -114,7 +115,7 @@ public:
     bool isInverted() const;
     void setInverted(bool bInverted);
     
-public:
+protected:
     CCClippingNode();
 };
 

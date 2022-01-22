@@ -55,7 +55,7 @@ public:
     virtual void setIMEKeyboardState(bool bOpen);
 	virtual void setMultiTouchMask(bool mask);
     
-public:
+private:
     static CCEGLView* s_sharedView;
     
     CCEGLView(void);

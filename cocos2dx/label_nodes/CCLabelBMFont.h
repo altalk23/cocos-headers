@@ -149,7 +149,7 @@ public:
     inline void setAtlasName(const char* atlasName) { m_sAtlasName = atlasName; }
     
     std::set<unsigned int>* getCharacterSet() const;
-public:
+private:
     std::set<unsigned int>* parseConfigFile(const char *controlFile);
     void parseCharacterDefinition(gd::string line, ccBMFontDef *characterDefinition);
     void parseInfoArguments(gd::string line);
@@ -270,13 +270,13 @@ public:
         void limitLabelWidth(float width, float defaultScale, float minScale);
     )
 
-public:
+private:
     char * atlasNameFromFntFile(const char *fntFile);
     int kerningAmountForFirst(unsigned short first, unsigned short second);
     float getLetterPosXLeft( CCSprite* characterSprite );
     float getLetterPosXRight( CCSprite* characterSprite );
     
-public:
+protected:
     virtual void setString(unsigned short *newString, bool needUpdateLabel);
     // string to render
     unsigned short* m_sString;

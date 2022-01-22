@@ -89,7 +89,7 @@ public:
     //Robtop modification
     virtual void openURL(char const* link);
     
-public:
+protected:
     static CCApplication * sm_pSharedApplication;
     
     gd::string m_resourceRootPath;

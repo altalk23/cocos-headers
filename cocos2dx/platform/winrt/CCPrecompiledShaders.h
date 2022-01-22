@@ -81,7 +81,7 @@ public:
     void savePrecompiledShaders();
 #endif
 
-public:
+protected:
     void savePrecompiledPrograms(Windows::Storage::StorageFolder^ folder);
     void loadPrecompiledPrograms();
 
